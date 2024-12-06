@@ -1,0 +1,186 @@
+/* General body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f7f8fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Main container styling */
+.kaste {
+    margin: 40px auto;
+    padding: 20px 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    overflow: hidden; /* Ensures child elements don't overflow */
+}
+
+/* Headings */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #0056b3; /* Investment-themed blue */
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #4f4f4f;
+}
+
+/* Input styling */
+input.form-control {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #555;
+    background: #f9f9f9;
+    width: 100%;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Buttons */
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    width: 100%;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.btn-primary {
+    background-color: #0056b3;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #004494;
+}
+
+#vel {
+    background-color: #dc3545;
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px 20px;
+    width: 50%;
+    margin: 30px auto 0;
+    border-radius: 8px;
+    display: block;
+    text-align: center;
+}
+
+#vel:hover {
+    background-color: #c82333;
+}
+
+/* Card styling */
+#card-container {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: calc(33.333% - 15px); /* Ensures cards fit neatly in rows */
+    min-width: 280px;
+    flex-grow: 1;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Footer button styling */
+#enter {
+    background: #ffc107;
+    color: #333;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 15px;
+    border: none;
+}
+
+#enter:hover {
+    background: #e0a800;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    #card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    #vel {
+        width: 70%; /* Larger retry button on smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    #vel {
+        width: 90%; /* Full-width retry button on smallest screens */
+    }
+}
