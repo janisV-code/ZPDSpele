@@ -258,4 +258,4 @@ function savetoDb() {
     };
     console.log("Saglabātie dati: ", saveObj);
 }
-}
+
