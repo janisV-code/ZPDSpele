@@ -7,6 +7,9 @@ saktBtn.addEventListener("click", jaunaKarts);
 const velreiz=document.getElementById("vel");
 velreiz.addEventListener("click", jaunaKarts);
 let rezElement = document.getElementById("rez");
+let jautElement=document.getElementById("jaut");
+let spele=document.getElementById("nos");
+let end=document.getElementById("viss");
 let punkti=0;
 //paslēpt
 jaunaKartsBtn.style.display="none";
@@ -15,6 +18,7 @@ div.style.display="none";
 const uzd=document.getElementById("uzd");
 uzd.style.display="none";
 velreiz.style.display="none";
+jautElement.style.display="none";
 class KarsuKava{
     bija;//lietota kārts
     nebija;//vēl neizspēlēta kārts
@@ -81,12 +85,17 @@ let cardValue;
 let cardValue1;
 let questionNr=1;
 function jaunaKarts(){
+    spele.style.display="none";
     velreiz.style.display="none";
+    end.style.display="none";
     rezElement.style.display="none";
+    jautElement.style.display="flex";
     uzd.style.display="flex";
         console.log("spēlētāja vārds ir ",vards.value);
     vards.style.display="none";
     saktBtn.style.display="none";
+    jaut = "Jautājums NR "+ questionNr;
+    jautElement.innerText = jaut; 
     uzd.style.display="flex";
         //nosaka spēles beigas
     if(questionNr>3){
@@ -95,10 +104,13 @@ function jaunaKarts(){
         velreiz.style.display="flex";
         uzd.style.display="none";
         div.style.display="none";
+        jautElement.style.display="none";
         jaunaKartsBtn.style.display="none";
+        end.style.display="block";
         rez = "Iegūto punktu skaits: "+ punkti;
         rezElement.style.display="block";
         rezElement.innerText = rez; 
+        savetoDb();
         questionNr=1;
         punkti=0;
         return;
@@ -148,10 +160,13 @@ function pienemt(){
             velreiz.style.display="flex";
             uzd.style.display="none";
             div.style.display="none";
+            jautElement.style.display="none";
             jaunaKartsBtn.style.display="none";
+            end.style.display="block";
             rez = "Iegūto punktu skaits: "+ punkti;
             rezElement.style.display="block";
             rezElement.innerText = rez; 
+            savetoDb();
             questionNr=1;
             punkti=0;
             return;
@@ -159,6 +174,7 @@ function pienemt(){
     }
     else{
         console.log("tu nesaproti ko dari!")
+        console.log("Iegūto punktu skaits: "+punkti)
         //alert("tu nesaproti ko dari!");
         div.style.display="none";
         if(questionNr>3){
@@ -167,16 +183,18 @@ function pienemt(){
             velreiz.style.display="flex";
             uzd.style.display="none";
             div.style.display="none";
+            jautElement.style.display="none";
             jaunaKartsBtn.style.display="none";
+            end.style.display="block";
             rez = "Iegūto punktu skaits: "+ punkti;
             rezElement.style.display="block";
             rezElement.innerText = rez; 
+            savetoDb();
             questionNr=1;
             punkti=0;
             return;
         }
     }
-    console.log("Iegūto punktu skaits: "+punkti)
 div.style.display="none";
 //console.log("pienemts");
 }
@@ -194,10 +212,13 @@ function pienemt1(){
             velreiz.style.display="flex";
             uzd.style.display="none";
             div.style.display="none";
+            jautElement.style.display="none";
             jaunaKartsBtn.style.display="none";
+            end.style.display="block";
             rez = "Iegūto punktu skaits: "+ punkti;
             rezElement.style.display="block";
             rezElement.innerText = rez; 
+            savetoDb();
             questionNr=1;
             punkti=0;
             return;
@@ -215,14 +236,26 @@ function pienemt1(){
             velreiz.style.display="flex";
             uzd.style.display="none";
             div.style.display="none";
+            jautElement.style.display="none";
             jaunaKartsBtn.style.display="none";
+            end.style.display="block";
             rez = "Iegūto punktu skaits: "+ punkti;
             rezElement.style.display="block";
             rezElement.innerText = rez; 
+            savetoDb();
             questionNr=1;
             punkti=0;
             return;
         }
     }
 //console.log("pienemts");
+}
+
+function savetoDb() {
+    saveObj = {
+        vards: vards.value,
+        rezultats: punkti,
+    };
+    console.log("Saglabātie dati: ", saveObj);
+}
 }
