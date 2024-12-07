@@ -19,6 +19,7 @@ const uzd=document.getElementById("uzd");
 uzd.style.display="none";
 velreiz.style.display="none";
 jautElement.style.display="none";
+end.style.display="none";
 class KarsuKava{
     bija;//lietota kārts
     nebija;//vēl neizspēlēta kārts
