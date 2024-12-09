@@ -26,88 +26,95 @@ class KarsuKava{
 
 }
 const kartis=[
-{
-    id: "1",
-    nr: "Swedbank",
-    text: "Termiņš: 1 gads\nProcentu likme 2.5%\nVeids: fiksēti",
-    term: "1 gads",
-    rate: "2.5%",
-    capital: 12,
-    value:100,
-},
-{
-    id:"2",
-    nr:  "Citadele",
-    text: "Termiņš: 6 mēneši\n Procentu likme 2%\nveids: fiksēti",
-    term:"6 mēneši",
-    rate:"2%",
-    value:10,
-},
-{
-    id:"3",
-    nr: "SEB",
-    text: "Termiņš: 3 mēneši\nProcentu likme 1.5%\nVeids: fiksēti",
-    term: "3 mēneši",
-    rate: "1.5%",
-    value:4,
-},
-{
-    id:"4",
-    nr: "Luminor",
-    text: "Termiņš: 2 gadi\nProcentu likme 3%\nVeids: fiksēti",
-    term: "2 gadi",
-    rate: "3%",
-    value:50,
-
-},
-{
-    id:"5",
-    nr: "BlueOrange Bank",
-    text: "Termiņš: 9 mēneši\nProcentu likme 2.2%\nVeids: fiksēti",
-    term: "9 mēneši",
-    rate: "2.2%",
-    value:70,
-},
-{
-    id:"6",
-    nr: "Revolut Bank",
-    text: "Termiņš: 1 gads\nProcentu likme 2.8%\nVeids: fiksēti",
-    term: "1 gads",
-    rate: "2.8%",
-    value:50,
-},
-{
-    id:"7",
-    nr: "PrivatBank",
-    text: "Termiņš: 18 mēneši\nProcentu likme 2.9%\nVeids: fiksēti",
-    term: "18 mēneši",
-    rate: "2.9%",
-    value:400,
-},
-{
-    id:"8",
-    nr: "Citadele",
-    text: "Termiņš: 5 gadi\nProcentu likme 4%\nVeids: fiksēti",
-    term: "5 gadi",
-    rate: "4%",
-    value:300,
-},
-{
-    id:"9",
-    nr: "Swedbank",
-    text: "Termiņš: 2 gadi\nProcentu likme 3.5%\nVeids: fiksēti",
-    term: "2 gadi",
-    rate: "3.5%",
-    value:1,
-},
-{
-    id:"10",
-    nr: "SEB",
-    text: "Termiņš: 6 mēneši\nProcentu likme 2.3%\nVeids: fiksēti",
-    term: "6 mēneši",
-    rate: "2.3%",
-    value:180,
-}
+        id: "1",
+        nr: "Swedbank",
+        text: "Termiņš: 8 mēneši\nProcentu likme: 2.3%\nVeids: fiksēti\nKapitāls: 500 EUR",
+        term: "8 mēneši",
+        rate: "2.3%",
+        capital: 500,
+        value: 509 // Aprēķināts: 500 * (1 + 0.023 * (8/12))
+    },
+    {
+        id: "2",
+        nr: "Citadele",
+        text: "Termiņš: 3 gadi\nProcentu likme: 3.2%\nVeids: fiksēti\nKapitāls: 440 EUR",
+        term: "3 gadi",
+        rate: "3.2%",
+        capital: 440,
+        value: 483 // Aprēķināts: 440 * (1 + 0.032)^3
+    },
+    {
+        id: "3",
+        nr: "SEB",
+        text: "Termiņš: 14 mēneši\nProcentu likme: 2.7%\nVeids: fiksēti\nKapitāls: 480 EUR",
+        term: "14 mēneši",
+        rate: "2.7%",
+        capital: 480,
+        value: 495 // Aprēķināts: 480 * (1 + 0.027 * (14/12))
+    },
+    {
+        id: "4",
+        nr: "Luminor",
+        text: "Termiņš: 1 gads\nProcentu likme: 3%\nVeids: fiksēti\nKapitāls: 490 EUR",
+        term: "1 gads",
+        rate: "3%",
+        capital: 490,
+        value: 505 // Aprēķināts: 490 * (1 + 0.03)
+    },
+    {
+        id: "5",
+        nr: "BlueOrange Bank",
+        text: "Termiņš: 9 mēneši\nProcentu likme: 2.2%\nVeids: fiksēti\nKapitāls: 475 EUR",
+        term: "9 mēneši",
+        rate: "2.2%",
+        capital: 475,
+        value: 484 // Aprēķināts: 475 * (1 + 0.022 * (9/12))
+    },
+    {
+        id: "6",
+        nr: "Revolut Bank",
+        text: "Termiņš: 2 gadi\nProcentu likme: 2.9%\nVeids: fiksēti\nKapitāls: 460 EUR",
+        term: "2 gadi",
+        rate: "2.9%",
+        capital: 460,
+        value: 501 // Aprēķināts: 460 * (1 + 0.029)^2
+    },
+    {
+        id: "7",
+        nr: "PrivatBank",
+        text: "Termiņš: 18 mēneši\nProcentu likme: 3.1%\nVeids: fiksēti\nKapitāls: 455 EUR",
+        term: "18 mēneši",
+        rate: "3.1%",
+        capital: 455,
+        value: 495 // Aprēķināts: 455 * (1 + 0.031 * (18/12))
+    },
+    {
+        id: "8",
+        nr: "Citadele",
+        text: "Termiņš: 2.5 gadi\nProcentu likme: 3.5%\nVeids: fiksēti\nKapitāls: 430 EUR",
+        term: "2.5 gadi",
+        rate: "3.5%",
+        capital: 430,
+        value: 500 // Aprēķināts: 430 * (1 + 0.035)^2.5
+    },
+    {
+        id: "9",
+        nr: "Swedbank",
+        text: "Termiņš: 10 mēneši\nProcentu likme: 2.6%\nVeids: fiksēti\nKapitāls: 480 EUR",
+        term: "10 mēneši",
+        rate: "2.6%",
+        capital: 480,
+        value: 493 // Aprēķināts: 480 * (1 + 0.026 * (10/12))
+    },
+    {
+        id: "10",
+        nr: "SEB",
+        text: "Termiņš: 4 gadi\nProcentu likme: 3.8%\nVeids: fiksēti\nKapitāls: 410 EUR",
+        term: "4 gadi",
+        rate: "3.8%",
+        capital: 410,
+        value: 508 // Aprēķināts: 410 * (1 + 0.038)^4
+    }
 ];
 //definē ārpus funkcijas vēlākai izmantošanai
 let cardValue;
