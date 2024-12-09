@@ -10,6 +10,7 @@ let rezElement = document.getElementById("rez");
 let jautElement=document.getElementById("jaut");
 let spele=document.getElementById("nos");
 let end=document.getElementById("viss");
+let atbilde=document.getElementById("atb");
 let punkti=0;
 //paslēpt
 jaunaKartsBtn.style.display="none";
@@ -20,7 +21,10 @@ uzd.style.display="none";
 velreiz.style.display="none";
 jautElement.style.display="none";
 end.style.display="none";
+atbilde.style.display="none";
+
 const kartis=[
+    {
         id: "1",
         nr: "Swedbank",
         text: "Termiņš: 8 mēneši\nProcentu likme: 2.3%\nVeids: fiksēti\nKapitāls: 500 EUR",
@@ -120,6 +124,7 @@ function jaunaKarts(){
     velreiz.style.display="none";
     end.style.display="none";
     rezElement.style.display="none";
+    atbilde.style.display="none";
     jautElement.style.display="flex";
     uzd.style.display="flex";
         console.log("spēlētāja vārds ir ",vards.value);
@@ -154,6 +159,7 @@ function jaunaKarts(){
     //karts1
     let rnd = Math.floor(Math.random()*kartis.length);
     const cardInView = kartis[rnd];
+    console.log("karts nr ",cardInView.id);
     cardValue=cardInView.value;
   console.log("1. kārts vērtība: ",cardValue);
   let virsraksts=document.getElementById("card-title");
@@ -168,6 +174,7 @@ function jaunaKarts(){
  const cardInView1 = kartis[rnd1];
  cardValue1=cardInView1.value;
 console.log("2. kārts vērtība: ",cardValue1);
+console.log("karts nr ",cardInView1.id);
 let virsraksts1=document.getElementById("card-title1");
 virsraksts1.innerText=cardInView1.nr;
 let teksts1=document.getElementById("card-text1");
@@ -185,6 +192,9 @@ function pienemt(){
         punkti=punkti + 1;
         console.log("Iegūto punktu skaits: "+punkti);
         div.style.display="none";
+        atb= "Atbilde ir pareiza";
+        atbilde.innerText = atb; 
+        atbilde.style.display="flex";
         if(questionNr>3){
             console.log("spēle beigusies");
             alert("spēle beigusies");
@@ -289,4 +299,3 @@ function savetoDb() {
     };
     console.log("Saglabātie dati: ", saveObj);
 }
-
