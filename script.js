@@ -20,11 +20,6 @@ uzd.style.display="none";
 velreiz.style.display="none";
 jautElement.style.display="none";
 end.style.display="none";
-class KarsuKava{
-    bija;//lietota kārts
-    nebija;//vēl neizspēlēta kārts
-
-}
 const kartis=[
         id: "1",
         nr: "Swedbank",
