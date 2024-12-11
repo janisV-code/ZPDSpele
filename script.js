@@ -830,7 +830,7 @@ async function savetoDb() {
     ilgTermProcenti: ilgProcenti,
     iegutaNauda: summa,
   };
-  console.log("Saglabātie dati: ", saveObj);
+
   const host = "https://programmesana2.lv";
   //   const host = "http://localhost:3000";
   const apiUrl = `${host}/api/janis/save-to-db`;
@@ -850,17 +850,5 @@ async function savetoDb() {
     saveObj.ilgTermProcenti
   )}&iegutaNauda=${encodeURIComponent(saveObj.iegutaNauda)}&key=janis123`;
 
-  console.log(url);
-  try {
-    const response = await fetch(url);
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-
-    const data = await response.json();
-    console.log("Atbilde no servera:", data);
-  } catch (error) {
-    console.error("Kļūda nosūtot datus:", error);
-  }
+  await fetch(url);
 }
