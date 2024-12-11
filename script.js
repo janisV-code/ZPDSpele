@@ -1,4 +1,10 @@
 const vards=document.getElementById("vards");
+const kl=document.getElementById("select");
+let klase="nav";
+kl.addEventListener("change",()=>{
+    klase = kl.value;
+});
+kl.style.display="block";
 const jaunaKartsBtn=document.getElementById("enter");
 console.log("strada js")
 jaunaKartsBtn.addEventListener("click", jaunaKarts);
@@ -342,6 +348,7 @@ function jaunaKarts(){
     atbilde.style.display="none";
     
     vards.style.display="none";
+    kl.style.display="none";
     saktBtn.style.display="none";
         //nosaka spēles beigas
     if(questionNr>15){
@@ -380,6 +387,7 @@ function jaunaKarts(){
         if (questionNr == 1) {
             console.log("spēlētāja vārds ir ",vards.value);
             console.log("sākas jautājumi par īstermiņa noguldījumiem");
+            console.log("spēlētājs ir ",klase," skolnieks/ce");
         }
     
         if (questionNr < 6) {
@@ -655,8 +663,11 @@ function pienemt1(){
 function savetoDb() {
     saveObj = {
         vards: vards.value,
+        klase: klase,
         rezultats: punkti,
         procenti: procenti,
+        ilgPunkti: ilgPunkti,
+        isPunkti: isPunkti,
         isTermProcenti: isProcenti,
         ilgTermProcenti: ilgProcenti,
         iegutaNauda: summa,
