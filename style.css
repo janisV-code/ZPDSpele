@@ -7,6 +7,71 @@ body {
     color: #333;
 }
 
+/*Popup atbilde*/
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 80%; /* Adjusted width */
+    max-width: 600px; /* Optional maximum width */
+    height: auto; /* Allows content-based height */
+    max-height: 90%; /* Prevents it from overflowing */
+    padding: 30px; /* Increased padding for better appearance */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow */
+    border-radius: 10px; /* Adjusted border radius */
+    overflow-y: auto; /* Adds scroll if content exceeds height */
+    z-index: 1000;
+}
+
+.popup h2 {
+    margin: 0 0 15px; /* Added more spacing */
+    font-size: 24px; /* Larger font size */
+    text-align: center; /* Center align title */
+}
+
+.popup button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px 25px; /* Larger button size */
+    font-size: 16px; /* Larger font size */
+    cursor: pointer;
+    border-radius: 8px; /* Adjusted border radius */
+}
+
+.popup button:hover {
+    background-color: #0056b3;
+}
+
+.overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Darker overlay */
+    z-index: 999;
+}
+
+button#openPopup {
+    padding: 12px 25px; /* Adjusted button size */
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button#openPopup:hover {
+    background-color: #218838;
+}
+
+
 /* Main container styling */
 .kaste {
     margin: 40px auto;
