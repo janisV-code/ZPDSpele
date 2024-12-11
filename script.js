@@ -11,6 +11,8 @@ let jautElement=document.getElementById("jaut");
 let spele=document.getElementById("nos");
 let end=document.getElementById("viss");
 let atbilde=document.getElementById("atb");
+const popup=document.getElementById("popup");
+const overlay=document.getElementById("overlay");
 let punkti=0;
 let isPunkti=0;
 let ilgPunkti=0;
@@ -27,6 +29,7 @@ velreiz.style.display="none";
 jautElement.style.display="none";
 end.style.display="none";
 atbilde.style.display="none";
+ let summa=0;
 
 const kartis=[
     {
@@ -333,8 +336,11 @@ function jaunaKarts(){
     velreiz.style.display="none";
     end.style.display="none";
     rezElement.style.display="none";
+
+    popup.style.display = 'none';
+    overlay.style.display = 'none';
     atbilde.style.display="none";
-        console.log("spēlētāja vārds ir ",vards.value);
+    
     vards.style.display="none";
     saktBtn.style.display="none";
         //nosaka spēles beigas
@@ -353,11 +359,13 @@ function jaunaKarts(){
         procenti=(punkti/15)*100;
         isProcenti=(isPunkti/5)*100;
         ilgProcenti=(ilgPunkti/5)*100;
+        summa=parseFloat(summa.toFixed(2));
         savetoDb();
         questionNr=1;
          punkti=0;
          isPunkti=0
          ilgPunkti=0
+         summa=0;
         return;
     }
     else {
@@ -370,6 +378,7 @@ function jaunaKarts(){
         div.style.display = "flex";
     
         if (questionNr == 1) {
+            console.log("spēlētāja vārds ir ",vards.value);
             console.log("sākas jautājumi par īstermiņa noguldījumiem");
         }
     
@@ -415,7 +424,7 @@ function jaunaKarts(){
             let teksts = document.getElementById("card-text");
             teksts.innerText = cardInView.text;
     
-            // kārts 2
+            // kārts 2s
             let rnd1;
             do {
                 rnd1 = Math.floor(Math.random() * ilgKartis.length);
@@ -473,19 +482,25 @@ function pienemt(){
     if (cardValue>cardValue1){
         console.log("tu saproti ko dari")
         //alert("tu saproti ko dari");
+        summa=summa+cardValue;
         punkti=punkti + 1;
         if(questionNr<6){
             isPunkti=isPunkti+1;
+            console.log("Iegūto ispunktu skaits: "+isPunkti);
         }
-        if(questionNr<11){
+        if(5<questionNr&&questionNr<11){
             ilgPunkti=ilgPunkti+1;
+            console.log("Iegūto ilgpunktu skaits: "+ilgPunkti);
         }
         console.log("Iegūto punktu skaits: "+punkti);
-        console.log("Iegūto ispunktu skaits: "+isPunkti);
-        div.style.display="none";
+        //div.style.display="none"; varbūt
+        //popup
+        popup.style.display="block";
+        overlay.style.display="block";
         atb= "Atbilde ir pareiza";
         atbilde.innerText = atb; 
         atbilde.style.display="flex";
+
         if(questionNr>15){
             console.log("spēle beigusies");
             alert("spēle beigusies");
@@ -501,11 +516,13 @@ function pienemt(){
             procenti=(punkti/15)*100;
             isProcenti=(isPunkti/5)*100;
             ilgProcenti=(ilgPunkti/5)*100;
+            summa=parseFloat(summa.toFixed(2));
             savetoDb();
             questionNr=1;
             punkti=0;
             isPunkti=0
             ilgPunkti=0
+            summa=0;
             return;
         }
     }
@@ -513,7 +530,13 @@ function pienemt(){
         console.log("tu nesaproti ko dari!")
         console.log("Iegūto punktu skaits: "+punkti)
         //alert("tu nesaproti ko dari!");
-        div.style.display="none";
+        //popup
+        popup.style.display="block";
+        overlay.style.display="block";
+        atb= "Atbilde ir pareiza";
+        atbilde.innerText = atb; 
+        atbilde.style.display="flex";
+
         if(questionNr>15){
             console.log("spēle beigusies");
             alert("spēle beigusies");
@@ -529,15 +552,16 @@ function pienemt(){
             procenti=(punkti/15)*100;
             isProcenti=(isPunkti/5)*100;
             ilgProcenti=(ilgPunkti/5)*100;
+            summa=parseFloat(summa.toFixed(2));
             savetoDb();
             questionNr=1;
             punkti=0;
             isPunkti=0
             ilgPunkti=0
+            summa=0;
             return;
         }
     }
-div.style.display="none";
 //console.log("pienemts");
 }
 pienBtn1.addEventListener("click", pienemt1);
@@ -545,16 +569,25 @@ function pienemt1(){
     if (cardValue1>cardValue){
         console.log("tu saproti ko dari")
         //alert("tu saproti ko dari");
+        summa=summa+cardValue;
         punkti=punkti + 1;
         if(questionNr<6){
             isPunkti=isPunkti+1;
+            console.log("Iegūto ispunktu skaits: "+isPunkti);
         }
-        if(questionNr<11){
+        if(5<questionNr&&questionNr<11){
             ilgPunkti=ilgPunkti+1;
+            console.log("Iegūto ilgpunktu skaits: "+ilgPunkti);
         }
         console.log("Iegūto punktu skaits: "+punkti);
         console.log("Iegūto ispunktu skaits: "+isPunkti);
-        div.style.display="none";
+        //popup
+        popup.style.display="block";
+        overlay.style.display="block";
+        atb= "Atbilde ir pareiza";
+        atbilde.innerText = atb; 
+        atbilde.style.display="flex";
+
         if(questionNr>15){
             console.log("spēle beigusies");
             alert("spēle beigusies");
@@ -570,11 +603,13 @@ function pienemt1(){
             procenti=(punkti/15)*100;
             isProcenti=(isPunkti/5)*100;
             ilgProcenti=(ilgPunkti/5)*100;
+            summa=parseFloat(summa.toFixed(2));
             savetoDb();
             questionNr=1;
             punkti=0;
             isPunkti=0
             ilgPunkti=0
+            summa=0;
             return;
         }
     }
@@ -583,7 +618,13 @@ function pienemt1(){
     else{
         console.log("tu nesaproti ko dari!")
         //alert("tu nesaproti ko dari!");
-        div.style.display="none";
+        //popup
+        popup.style.display="block";
+        overlay.style.display="block";
+        atb= "Atbilde ir pareiza";
+        atbilde.innerText = atb; 
+        atbilde.style.display="flex";
+                
         if(questionNr>15){
             console.log("spēle beigusies");
             alert("spēle beigusies");
@@ -599,11 +640,13 @@ function pienemt1(){
             procenti=(punkti/15)*100;
             isProcenti=(isPunkti/5)*100;
             ilgProcenti=(ilgPunkti/5)*100;
+            summa=parseFloat(summa.toFixed(2));
             savetoDb();
             questionNr=1;
             punkti=0;
             isPunkti=0
             ilgPunkti=0
+            summa=0
             return;
         }
     }
@@ -616,6 +659,7 @@ function savetoDb() {
         procenti: procenti,
         isTermProcenti: isProcenti,
         ilgTermProcenti: ilgProcenti,
+        iegutaNauda: summa,
     };
     console.log("Saglabātie dati: ", saveObj);
 }
