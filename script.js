@@ -672,5 +672,27 @@ function savetoDb() {
         ilgTermProcenti: ilgProcenti,
         iegutaNauda: summa,
     };
-    console.log("Saglabātie dati: ", saveObj);
-}
+        console.log("Saglabātie dati: ", saveObj);
+
+       const apiUrl = "https://programmesana2.lv/api/janis";
+    
+        fetch(apiUrl, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(saveObj),
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log("Atbilde no servera: ", data);
+        })
+        .catch(error => {
+            console.error("Kļūda nosūtot datus: ", error);
+        });
+    }
