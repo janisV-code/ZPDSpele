@@ -61,18 +61,6 @@
               <button type="button" class="btn btn-success" id="sakt">Sākt</button>
             </div>
         </div> 
-        <div class="atb">
-          <div class="atb-inner">
-            <p id="atb"></p>
-            <button
-            type="button"
-            class="btn btn-primary btn-sm mt-1"
-            id="enter"
-          >
-            Jauna kārts
-          </button>
-          </div>
-        </div>
                    <!-- cards -->
           <div id="card-container" style="display: flex; gap: 20px;">
                 <div class="card" style="width: 18rem;">
@@ -94,6 +82,21 @@
                       </div>
                     </div>
                   </div>
+
+                  <!--popup atbilde -->
+            <div class="overlay" id="overlay">
+              <div class="popup" id="popup">
+                  <h2>Atbilde:</h2>
+                  <p id="atb"></p>
+                  <button
+                  type="button"
+                  class="btn btn-primary btn-sm mt-1"
+                  id="enter"
+                >
+                  Jauna kārts
+                </button>
+              </div>
+              </div>
                   <br>
                   <!-- <div class="d-flex justify-content-center">
                     <div class="col-12 col-lg-5">
