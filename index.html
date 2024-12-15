@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ZPD Spēle</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -40,6 +40,7 @@
               <div class="row">
                 <div class="d-flex justify-content-center">
                   <h1 id="jaut"></h1>
+                  <h3 id="top-right-text">S=A*(1+r/100)^t</h3>
                 </div>
                 </div>
         <div class="row">
@@ -63,6 +64,7 @@
                 <option value="10.klases">10.klase</option>
                 <option value="11.klases">11.klase</option>
                 <option value="12.klases">12.klase</option>
+                <option value="cits">Cits</option>
               </select>
               <button type="button" class="btn btn-success" id="sakt">Sākt</button>
             </div>
@@ -70,21 +72,19 @@
                    <!-- cards -->
           <div id="card-container" style="display: flex; gap: 20px;">
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="karts.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="karts2.webp" alt="Card image cap">
                     <div class="card-body">
-                      <h5 class="card-title" id="card-title">Darijums1</h5>
-                      <p class="card-text" id="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <h2 class="card-title" id="card-title">Darijums1</h2>
+                      <p class="card-text" id="card-text"></p>
                       <a href="#" class="btn btn-primary" id="pienemt">Pieņemt</a>
-                      <!-- <a href="#" class="btn btn-danger" id="noraidit">Noraidīt</a> -->
                     </div>
                   </div>
                   <div class="card" style="width: 18rem;">
-                      <img class="card-img-top" src="karts.jpg" alt="Card image cap">
+                      <img class="card-img-top" src="karts1.webp" alt="Card image cap">
                       <div class="card-body">
-                        <h5 class="card-title" id="card-title1">Darijums1</h5>
-                        <p class="card-text" id="card-text1">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <h2 class="card-title" id="card-title1">Darijums1</h2>
+                        <p class="card-text" id="card-text1"></p>
                         <a href="#" class="btn btn-primary" id="pienemt1">Pieņemt</a>
-                        <!-- <a href="#" class="btn btn-danger" id="noraidit">Noraidīt</a> -->
                       </div>
                     </div>
                   </div>
@@ -92,8 +92,8 @@
                   <!--popup atbilde -->
             <div class="overlay" id="overlay">
               <div class="popup" id="popup">
-                  <h2>Atbilde:</h2>
-                  <p id="atb"></p>
+                  <h1 id="statuss"></h1>
+                  <h4 id="atb"></h4>
                   <button
                   type="button"
                   class="btn btn-primary btn-sm mt-1"
@@ -104,31 +104,6 @@
               </div>
               </div>
                   <br>
-                  <!-- <div class="d-flex justify-content-center">
-                    <div class="col-12 col-lg-5">
-                      <div class="d-flex justify-content-end">
-                        <button
-                          type="button"
-                          class="btn btn-primary btn-sm mt-1"
-                          id="enter"
-                        >
-                          Jauna kārts
-                        </button>
-                      </div>
-                    </div>
-                  </div>   -->
-
-                  
-                <!--<div class="card">
-                    <div class="card-header">
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Noguldijums2</h5>
-                      <p class="card-text">Padodies.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div> 
-                </div> -->
               </div> <!--Kaste beigas-->
     <script src="script.js"></script>
     <script
