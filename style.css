@@ -5,121 +5,153 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
+    text-align: center; /* Centrēts visam tekstam */
+    background-color: rgb(193, 184, 184);
 }
-
-/*Popup atbilde*/
+#top-right-text {
+    position: absolute; /* Nostiprina elementu relatīvi pie body */
+    top: 50px; /* Attālums no augšas */
+    right: 102px; /* Attālums no labās malas */
+    font-size: 1.2rem; /* Teksta izmērs */
+    color: #333; /* Teksta krāsa */
+    background: rgba(255, 255, 255, 0.8); /* Fona krāsa ar nelielu caurspīdīgumu */
+    padding: 5px 10px; /* Iekšējā atstarpe */
+    border-radius: 5px; /* Apaļi stūri, ja nepieciešams */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Neliela ēna, ja vēlies */
+}
+/* Popup Styling */
 .popup {
-    display: none; /* Hidden by default */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Horizontālā centrēšana */
+    justify-content: center; /* Vertikālā centrēšana */
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    width: 80%; /* Adjusted width */
-    max-width: 600px; /* Optional maximum width */
-    height: auto; /* Allows content-based height */
-    max-height: 90%; /* Prevents it from overflowing */
-    padding: 30px; /* Increased padding for better appearance */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow */
-    border-radius: 10px; /* Adjusted border radius */
-    overflow-y: auto; /* Adds scroll if content exceeds height */
+    width: 80%;
+    max-width: 600px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
     z-index: 1000;
+    text-align: center;
 }
 
-.popup h2 {
-    margin: 0 0 15px; /* Added more spacing */
-    font-size: 24px; /* Larger font size */
-    text-align: center; /* Center align title */
+.popup h1 {
+    font-size: 3.5rem; /* Lielāks h1 */
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.popup h4 {
+    font-size: 1.5rem; /* Lielāks h4 */
+    color: #444;
+    margin-bottom: 20px;
+    text-align: center; /* Horizontālā centrēšana */
+    display: flex; /* Pārvērš h4 elementu par flex konteineru */
+    align-items: center; /* Vertikālā centrēšana */
+    justify-content: center; /* Vertikālā centrēšana */
 }
 
 .popup button {
     background-color: #007BFF;
     color: white;
     border: none;
-    padding: 12px 25px; /* Larger button size */
-    font-size: 16px; /* Larger font size */
+    padding: 12px 25px;
+    font-size: 1.4rem; /* Lielāks fonta izmērs */
     cursor: pointer;
-    border-radius: 8px; /* Adjusted border radius */
+    border-radius: 8px;
+    margin-top: 20px;
+    justify-content: center;
 }
 
 .popup button:hover {
     background-color: #0056b3;
 }
 
+/* Overlay */
 .overlay {
-    display: none; /* Hidden by default */
+    display: none; 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Darker overlay */
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 999;
 }
 
-button#openPopup {
-    padding: 12px 25px; /* Adjusted button size */
-    font-size: 16px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button#openPopup:hover {
-    background-color: #218838;
-}
-
-
-/* Main container styling */
+/* Container for main content */
 .kaste {
     margin: 40px auto;
     padding: 20px 30px;
     background: #ffffff;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-    max-width: 80%;
-    overflow: hidden; /* Ensures child elements don't overflow */
+    max-width: 90%;
+    overflow: hidden;
+}
+
+.kaste1 {
+    text-align: center;
 }
 
 /* Headings */
-h1 {
-    font-size: 2.5rem;
+h1 {  
     margin-bottom: 20px;
-    text-align: center;
-    color: #0056b3; /* Investment-themed blue */
+    color: rgb(166, 146, 32);
+    font-size: 3.5rem; /* Lielāks h1 */
 }
 
-h3 {
-    font-size: 1.2rem;
+h2, h3 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2rem; /* Lielāki h2 un h3 */
+}
+
+/* Font size adjustment */
+h1#nos {
+    font-size: 3.5rem; /* Lielāks fonta izmērs */
+}
+
+h1#viss {
+    font-size: 2.5rem; /* Lielāks fonta izmērs */
+    display: none;
+}
+
+h3#uzd {
+    font-size: 2rem; /* Lielāks fonta izmērs */
     margin-bottom: 25px;
-    text-align: center;
-    color: #4f4f4f;
 }
 
-/* Input styling */
+#rez {
+    font-size: 2rem; /* Lielāks fonta izmērs */
+    margin-top: 20px;
+}
+
+/* Input Fields */
 input.form-control {
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 12px;
     margin-bottom: 15px;
-    font-size: 1rem;
-    color: #555;
+    font-size: 1.4rem; /* Lielāks fonta izmērs */
     background: #f9f9f9;
     width: 100%;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+select.form-select {
+    margin-bottom: 15px;
+    font-size: 1.4rem; /* Lielāks fonta izmērs */
 }
 
 /* Buttons */
 button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    font-size: 1.1rem;
+    padding: 12px 25px;
+    font-size: 1.4rem; /* Lielāks fonta izmērs */
     border-radius: 6px;
-    font-weight: 500;
-    transition: all 0.3s ease-in-out;
-    border: none;
     width: 100%;
 }
 
@@ -144,13 +176,13 @@ button {
 #vel {
     background-color: #dc3545;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.4rem; /* Lielāks fonta izmērs */
     padding: 12px 20px;
     width: 50%;
-    margin: 30px auto 0;
-    border-radius: 8px;
+    margin: 30px auto;
     display: block;
-    text-align: center;
+    border-radius: 8px;
+    justify-content: center;
 }
 
 #vel:hover {
@@ -161,10 +193,9 @@ button {
 #card-container {
     margin-top: 30px;
     display: flex;
-    gap: 15px;
+    gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
-    overflow: hidden;
 }
 
 .card {
@@ -173,9 +204,10 @@ button {
     border-radius: 10px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    width: calc(33.333% - 15px); /* Ensures cards fit neatly in rows */
+    width: calc(33.333% - 20px);
     min-width: 280px;
     flex-grow: 1;
+    text-align: center;
 }
 
 .card:hover {
@@ -192,22 +224,32 @@ button {
 }
 
 .card-title {
-    font-size: 1.3rem;
-    color: #0056b3;
+    font-size: 1.7rem; /* Lielāks fonta izmērs */
+    color: rgb(166, 146, 32);
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .card-text {
-    font-size: 1rem;
+    font-size: 1.4rem; /* Lielāks fonta izmērs */
     color: #555;
     margin-bottom: 15px;
+    text-align: center;
+}
+#pienemt,#pienemt1{
+    padding: 15px 30px; /* Increases the button's internal spacing */
+    font-size: 1.5rem;  /* Makes the text larger */
+    border-radius: 8px; /* Optional: rounded corners */
+    width: auto;        /* Adjusts width, set to 'auto' or specific value */
+    height: auto;       /* Adjusts height, set to 'auto' or specific value */
+    cursor: pointer;
 }
 
-/* Footer button styling */
+/* Footer button */
 #enter {
     background: #ffc107;
     color: #333;
-    font-size: 1rem;
+    font-size: 1.4rem; /* Lielāks fonta izmērs */
     padding: 10px 15px;
     border-radius: 5px;
     width: 100%;
@@ -221,31 +263,26 @@ button {
 
 /* Responsive Design */
 @media (max-width: 992px) {
-    #card-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .card {
-        width: 90%;
-        margin-bottom: 20px;
-    }
-
-    #vel {
-        width: 70%; /* Larger retry button on smaller screens */
+        width: calc(50% - 20px); /* Adjust for medium-sized screens */
     }
 }
 
 @media (max-width: 576px) {
     h1 {
-        font-size: 2rem;
+        font-size: 2.5rem; /* Mazākas vērtības uz maziem ekrāniem */
     }
 
-    h3 {
-        font-size: 1rem;
+    h2, h3 {
+        font-size: 1.8rem; /* Lielāks fonta izmērs mazajiem ekrāniem */
+    }
+
+    .card {
+        width: 100%; /* Full-width cards on small screens */
+        margin-bottom: 20px;
     }
 
     #vel {
-        width: 90%; /* Full-width retry button on smallest screens */
+        width: 90%; /* Full-width retry button on small screens */
     }
 }
