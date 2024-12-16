@@ -37,7 +37,7 @@ jautElement.style.display="none";
 end.style.display="none";
 atbilde.style.display="none";
  let summa=0;
-
+ let maxSumma=0;
 const kartis=[
     //iskartis
     {
@@ -776,14 +776,14 @@ let capital;
 let capital1;
 function jaunaKarts(){
     const vardsVal=vards.value;
-    if (vardsVal.trim().length === 0) {
-        alert("Lūdzu ievadi savu vārdu!");
-        return;
-    }
-    if(klase=="nav"){
-        alert("Lūdzu ievadi klasi kurā mācies!");
-        return;
-    }
+    // if (vardsVal.trim().length === 0) {
+    //     alert("Lūdzu ievadi savu vārdu!");
+    //     return;
+    // }
+    // if(klase=="nav"){
+    //     alert("Lūdzu ievadi klasi kurā mācies!");
+    //     return;
+    // }
     spele.style.display="none";
     velreiz.style.display="none";
     end.style.display="none";
@@ -828,7 +828,7 @@ function jaunaKarts(){
             par="Spēles noteikumi";
             statuss.style.color="rgb(166, 146, 32)";
             statuss.innerText=par;
-            atb= "Balstoties uz dotajiem datiem un izmantojot salikto procentu formulu, nosaki, kuras kārts darījumu pieņemt, lai iegūtu vislielāko vērtību pēc termiņa beigām. Termiņš jāizsaka gados. Par katru pareizu atbildi iegūsi 1 punktu, bet par nepareizu zaudēsi investēto kapitālu! Veiksmi!";
+            atb= "Balstoties uz dotajiem datiem un izmantojot salikto procentu formulu, nosaki, kuras kārts darījumu pieņemt, lai pēc termiņa beigām iegūtu lielāko iespējamo naudas summu no investīcijas. Termiņš jāizsaka gados! Par katru pareizu atbildi iegūsi 1 punktu. Spēles beigās uzzināsi iegūto naudas summu no noguldījumiem un maksimālo summu, kuru varēji iegūt. Veiksmi!";
             atbilde.innerText = atb; 
             atbilde.style.display="flex";
             jaunaKartsBtn.innerText="sākt";
@@ -941,7 +941,9 @@ function pienemt(){
         console.log("Atbilde ir pareiza");
         //alert("tu saproti ko dari");
         summa=summa+cardValue;
+        maxSumma=maxSumma+cardValue;
         console.log("summa:"+summa);
+        console.log("Max summa:"+maxSumma);
         punkti=punkti + 1;
         if(questionNr<6){
             isPunkti=isPunkti+1;
@@ -971,8 +973,8 @@ function pienemt(){
         console.log("Atbilde ir nepareiza");
         console.log("Iegūto punktu skaits: "+punkti)
         //alert("tu nesaproti ko dari!");
-        summa=summa-capital;
-        console.log("summa:"+summa);
+        maxSumma=maxSumma+cardValue1;
+        console.log("Max summa:"+maxSumma);
         //popup
         popup.style.display="block";
         overlay.style.display="block";
@@ -996,7 +998,9 @@ function pienemt1(){
         console.log("Atbilde ir pareiza");
         //alert("tu saproti ko dari");
         summa=summa+cardValue1;
+        maxSumma=maxSumma+cardValue1;
         console.log("summa:"+summa);
+        console.log("Max summa:"+maxSumma);
         punkti=punkti + 1;
         if(questionNr<6){
             isPunkti=isPunkti+1;
@@ -1028,8 +1032,8 @@ function pienemt1(){
     else{
         console.log("Atbilde ir nepareiza");
         //alert("tu nesaproti ko dari!");
-        summa=summa-capital1;
-        console.log("summa:"+summa);
+        maxSumma=maxSumma+cardValue1;
+        console.log("Max summa:"+maxSumma);
         //popup
         popup.style.display="block";
         overlay.style.display="block";
@@ -1058,12 +1062,8 @@ function beigas(){
     popup.style.display="none";
     overlay.style.display="none";
     summa=parseFloat(summa.toFixed(2));
-    if(summa>0){
-        rez = "Iegūto punktu skaits: "+ punkti+"\n Spēles laikā Iegūtā summa:: "+summa+" EUR";
-    }
-    else{
-        rez = "Iegūto punktu skaits: "+ punkti+"\n Spēles laikā zaudētā summa:: "+summa+" EUR";
-    }
+    maxSumma=parseFloat(maxSumma.toFixed(2));
+        rez = "Iegūto punktu skaits: "+ punkti+"\n Spēles laikā iegūti "+summa+" EUR no iespējamiem "+maxSumma+" EUR";
     rezElement.style.display="block";
     rezElement.innerText = rez; 
     procenti=(punkti/15)*100;
@@ -1074,9 +1074,10 @@ function beigas(){
     end.style.display="block";
     questionNr=1;
     punkti=0;
-    isPunkti=0
-    ilgPunkti=0
-    summa=0
+    isPunkti=0;
+    ilgPunkti=0;
+    summa=0;
+    maxSumma=0;
 }
 function savetoDb() {
     saveObj = {
