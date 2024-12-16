@@ -100,27 +100,28 @@ body {
     top: 10px; /* Attālums no augšas */
     right: 10px; /* Attālums no kreisās malas */
     border-radius: 8px; /* Opcija: apaļi stūri */
-    max-width: 20%; /* Ensures the image scales to fit */
+    max-width: 25%; /* Ensures the image scales to fit */
     height: auto; /* Maintains aspect ratio */
     object-fit: contain; /* Ensures the image fits nicely in its container */
     z-index: 1;
 }
 .kaste1 {
     text-align: center;
+    justify-content: center; 
 }
 
 /* Headings */
 h1 {  
     margin-bottom: 20px;
     color: rgb(166, 146, 32);
-    font-size: 3.5rem; /* Lielāks h1 */
+    font-size: 3.3rem; /* Lielāks h1 */
     z-index: 2;
 }
 
 h2, h3 {
     margin-bottom: 20px;
     color: #333;
-    font-size: 2rem; /* Lielāki h2 un h3 */
+    font-size: 1.7rem; /* Lielāki h2 un h3 */
 }
 
 /* Font size adjustment */
@@ -142,6 +143,10 @@ h3#uzd {
     font-size: 2rem; /* Lielāks fonta izmērs */
     margin-top: 20px;
 }
+#rez2 {
+    font-size: 2rem; /* Lielāks fonta izmērs */
+    margin-top: 20px;
+}
 
 /* Input Fields */
 input.form-control {
@@ -159,6 +164,13 @@ select.form-select {
     font-size: 1.4rem; /* Lielāks fonta izmērs */
 }
 
+/* Optional: Table styling */
+.table { 
+    width:55%;
+    max-width: 80%;   
+    border-collapse: collapse;
+    overflow-x:auto;
+}
 /* Buttons */
 button {
     padding: 12px 25px;
@@ -168,7 +180,7 @@ button {
 }
 
 .btn-success {
-    background-color: #28a745;
+    background-color: #218838;
     color: white;
 }
 
@@ -211,7 +223,7 @@ button {
 }
 
 .card {
-    background: rgb(243, 231, 215);
+    background: rgb(243, 236, 227);
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
@@ -237,7 +249,7 @@ button {
 
 .card-title {
     font-size: 1.7rem; /* Lielāks fonta izmērs */
-    color: rgb(240, 70, 52);
+    color:rgb(182, 51, 51);
     margin-bottom: 10px;
     text-align: center;
 }
@@ -272,6 +284,7 @@ button {
 #enter:hover {
     background: #e0a800;
 }
+
 
 /* Responsive Design */
 @media (max-width: 992px) {
