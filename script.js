@@ -1090,6 +1090,7 @@ function savetoDb() {
         isTermProcenti: isProcenti,
         ilgTermProcenti: ilgProcenti,
         iegutaNauda: summa,
+        maksimalaSumma: maxSumma;
     };
     console.log("Saglabātie dati: ", saveObj);
 }
