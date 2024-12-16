@@ -303,7 +303,7 @@ button {
         width: 90%; /* Full-width retry button on small screens */
     }
         #formula{
-        max-width:50%;
+        max-width:35%;
         height:auto;
 }
 }
