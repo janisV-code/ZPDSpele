@@ -434,8 +434,11 @@ function jaunaKarts(){
     }
     spele.style.display="none";
     velreiz.style.display="none";
-    
-
+    rezElement.style.display="none";
+    rez2Element.style.display="none";
+    table.style.display="none";
+    end.style.display="none";
+    //popup
     popup.style.display = 'none';
     overlay.style.display = 'none';
     atbilde.style.display="none";
@@ -478,7 +481,7 @@ function jaunaKarts(){
             par="Spēles noteikumi";
             statuss.style.color="rgb(166, 146, 32)";
             statuss.innerText=par;
-            atb= "Izmantojot datus un salikto procentu formulu, nosaki un izvēlies ienesīgāko investīciju! Aprēķinot summu noguldījuma termiņš jānorāda gados. Par katru pareizu atbildi – 1 punkts. Spēles beigās uzzināsi iegūtos punktus un naudas summu, kā arī maksimālo iegūstamo naudas summu par noguldījumiem. Veiksmi!";
+            atb= "Izmantojot datus un salikto procentu formulu, nosaki un izvēlies ienesīgāko investīciju! Aprēķinot summu termiņš jānorāda gados. Par katru pareizu atbildi – 1 punkts. Spēles beigās uzzināsi iegūtos punktus, naudas summu un maksimālo iegūstamo naudas summu par noguldījumiem. Veiksmi!";
             atbilde.innerText = atb; 
             atbilde.style.display="flex";
             jaunaKartsBtn.innerText="sākt";
@@ -792,6 +795,7 @@ function beigas(){
     procenti=procenti.toFixed(2);
     isProcenti=(isPunkti/5)*100;
     ilgProcenti=(ilgPunkti/5)*100;
+    table.style.overflowX="scroll";
     table.style.display="block";
     end.style.display="block";
     savetoDb();
