@@ -15,6 +15,7 @@ saktBtn.addEventListener("click", jaunaKarts);
 const velreiz=document.getElementById("vel");
 velreiz.addEventListener("click", jaunaKarts);
 let rezElement = document.getElementById("rez");
+let rez2Element=document.getElementById("rez2");
 let jautElement=document.getElementById("jaut");
 let spele=document.getElementById("nos");
 let end=document.getElementById("viss");
@@ -28,6 +29,12 @@ let ilgPunkti=0;
 let procenti=0;
 let isProcenti=0;
 let ilgProcenti=0;
+//table
+let table=document.getElementById("table");
+let tNr=document.getElementById("tNr");
+let maxV=document.getElementById("maxV");
+let iegV=document.getElementById("iegV");
+table.style.display="none";
 //paslēpt
 jaunaKartsBtn.style.display="none";
 const div=document.getElementById("card-container");
@@ -38,12 +45,15 @@ velreiz.style.display="none";
 jautElement.style.display="none";
 end.style.display="none";
 atbilde.style.display="none";
+rezElement.style.display="none";
+rez2Element.style.display="none";
+
  let summa=0;
  let maxSumma=0;
 const isKartis=[
     {
         id: 1,
-        nr: "KapitalBank",
+        nr: "Finanšu Pavasaris",
         text: "Termiņš: 9 mēneši\nProcentu likme: 5.0%\nVeids: fiksēti\nKapitāls: 340 EUR",
         term: 9,
         rate: 5.0,
@@ -70,7 +80,7 @@ const isKartis=[
     },
     {
         id: 4,
-        nr: "Ātrā Pelnītāja",
+        nr: "Naudas medības",
         text: "Termiņš: 10 mēneši\nProcentu likme: 8.5%\nVeids: fiksēti\nKapitāls: 341 EUR",
         term: 10,
         rate: 8.5,
@@ -79,7 +89,7 @@ const isKartis=[
     },
     {
         id: 5,
-        nr: "Maksimālais Laiks",
+        nr: "Loterija",
         text: "Termiņš: 12 mēneši\nProcentu likme: 10.0%\nVeids: fiksēti\nKapitāls: 347 EUR",
         term: 12,
         rate: 10.0,
@@ -106,7 +116,7 @@ const isKartis=[
     },
     {
         id: 8,
-        nr: "Īsais Darījums",
+        nr: "Fonds, ko nevari atrast",
         text: "Termiņš: 5 mēneši\nProcentu likme: 10.5%\nVeids: fiksēti\nKapitāls: 345 EUR",
         term: 5,
         rate: 10.5,
@@ -124,7 +134,7 @@ const isKartis=[
     },
     {
         id: 10,
-        nr: "Vērtīgā Monēta",
+        nr: "Uzticies man, brāl",
         text: "Termiņš: 8 mēneši\nProcentu likme: 5.5%\nVeids: fiksēti\nKapitāls: 378 EUR",
         term: 8,
         rate: 5.5,
@@ -151,7 +161,7 @@ const isKartis=[
     },
     {
         id: 13,
-        nr: "Peļņas Augļotājs",
+        nr: "Caurā krājkase",
         text: "Termiņš: 9 mēneši\nProcentu likme: 9.5%\nVeids: fiksēti\nKapitāls: 362 EUR",
         term: 9,
         rate: 9.5,
@@ -169,7 +179,7 @@ const isKartis=[
     },
     {
         id: 15,
-        nr: "Kapitāla Krājējs",
+        nr: "Zvaigžņu Finanšu Plāns",
         text: "Termiņš: 6 mēneši\nProcentu likme: 10.5%\nVeids: fiksēti\nKapitāls: 376 EUR",
         term: 6,
         rate: 10.5,
@@ -178,7 +188,7 @@ const isKartis=[
     },
     {
         id: 16,
-        nr: "Noguldījumu Glabātājs",
+        nr: "Tūlītējais Peļņas Rezervāts",
         text: "Termiņš: 7 mēneši\nProcentu likme: 7.0%\nVeids: fiksēti\nKapitāls: 353 EUR",
         term: 7,
         rate: 7.0,
@@ -196,7 +206,7 @@ const isKartis=[
     },
     {
         id: 18,
-        nr: "Stabila Ienesība",
+        nr: "Mazumiņa fonds",
         text: "Termiņš: 9 mēneši\nProcentu likme: 8.0%\nVeids: fiksēti\nKapitāls: 377 EUR",
         term: 9,
         rate: 8.0,
@@ -214,7 +224,7 @@ const isKartis=[
     },
     {
         id: 20,
-        nr: "Ienesīguma Fonds",
+        nr: "Gada Dārgakmens",
         text: "Termiņš: 6 mēneši\nProcentu likme: 9.0%\nVeids: fiksēti\nKapitāls: 356 EUR",
         term: 6,
         rate: 9.0,
@@ -253,7 +263,7 @@ const ilgKartis=[
     },
     {
         id: 4,
-        nr: "BankasSapnis",
+        nr: "Bankas Sapnis",
         text: "Termiņš: 8 gadi\nProcentu likme: 1.5%\nVeids: fiksēti\nKapitāls: 375 EUR",
         term: 8,
         rate: 1.5,
@@ -262,7 +272,7 @@ const ilgKartis=[
     },
     {
         id: 5,
-        nr: "ZeltaGlabātava",
+        nr: "Zelta Glabātava",
         text: "Termiņš: 6 gadi\nProcentu likme: 2.2%\nVeids: fiksēti\nKapitāls: 336 EUR",
         term: 6,
         rate: 2.2,
@@ -271,7 +281,7 @@ const ilgKartis=[
     },
     {
         id: 6,
-        nr: "IenesīgsFonds",
+        nr: "Ienesīgs Fonds",
         text: "Termiņš: 2 gadi\nProcentu likme: 2.4%\nVeids: fiksēti\nKapitāls: 345 EUR",
         term: 2,
         rate: 2.4,
@@ -280,7 +290,7 @@ const ilgKartis=[
     },
     {
         id: 7,
-        nr: "FinanšuOsta",
+        nr: "Finanšu Osta",
         text: "Termiņš: 5 gadi\nProcentu likme: 3.1%\nVeids: fiksēti\nKapitāls: 335 EUR",
         term: 5,
         rate: 3.1,
@@ -289,7 +299,7 @@ const ilgKartis=[
     },
     {
         id: 8,
-        nr: "DrošsPieaugums",
+        nr: "Drošs Pieaugums",
         text: "Termiņš: 6 gadi\nProcentu likme: 1.8%\nVeids: fiksēti\nKapitāls: 359 EUR",
         term: 6,
         rate: 1.8,
@@ -298,7 +308,7 @@ const ilgKartis=[
     },
     {
         id: 9,
-        nr: "KapitālaPlūsma",
+        nr: "Kapitāla Plūsma",
         text: "Termiņš: 7 gadi\nProcentu likme: 1.4%\nVeids: fiksēti\nKapitāls: 358 EUR",
         term: 7,
         rate: 1.4,
@@ -307,7 +317,7 @@ const ilgKartis=[
     },
     {
         id: 10,
-        nr: "NaudasKalns",
+        nr: "Naudas Kalns",
         text: "Termiņš: 7 gadi\nProcentu likme: 2.2%\nVeids: fiksēti\nKapitāls: 355 EUR",
         term: 7,
         rate: 2.2,
@@ -316,7 +326,7 @@ const ilgKartis=[
     },
     {
         id: 11,
-        nr: "NaudasStraume",
+        nr: "Naudas Straume",
         text: "Termiņš: 5 gadi\nProcentu likme: 2.4%\nVeids: fiksēti\nKapitāls: 340 EUR",
         term: 5,
         rate: 2.4,
@@ -325,7 +335,7 @@ const ilgKartis=[
     },
     {
         id: 12,
-        nr: "IeguldījumaKalns",
+        nr: "Naudas Vērtības Augstkalne",
         text: "Termiņš: 8 gadi\nProcentu likme: 1.3%\nVeids: fiksēti\nKapitāls: 350 EUR",
         term: 8,
         rate: 1.3,
@@ -334,7 +344,7 @@ const ilgKartis=[
     },
     {
         id: 13,
-        nr: "StabilaBanka",
+        nr: "Gadsimta noguldījums",
         text: "Termiņš: 2 gadi\nProcentu likme: 1.7%\nVeids: fiksēti\nKapitāls: 365 EUR",
         term: 2,
         rate: 1.7,
@@ -343,7 +353,7 @@ const ilgKartis=[
     },
     {
         id: 14,
-        nr: "NaudasKrātuve",
+        nr: "Zelta Rezervju Fonds",
         text: "Termiņš: 5 gadi\nProcentu likme: 2.9%\nVeids: fiksēti\nKapitāls: 320 EUR",
         term: 5,
         rate: 2.9,
@@ -352,7 +362,7 @@ const ilgKartis=[
     },
     {
         id: 15,
-        nr: "PieaugumaKlubs",
+        nr: "Drosmīgais Noguldījums",
         text: "Termiņš: 6 gadi\nProcentu likme: 2.1%\nVeids: fiksēti\nKapitāls: 340 EUR",
         term: 6,
         rate: 2.1,
@@ -361,7 +371,7 @@ const ilgKartis=[
     },
     {
         id: 16,
-        nr: "ProcentuParadīze",
+        nr: "Procentu Paradīze",
         text: "Termiņš: 7 gadi\nProcentu likme: 2.0%\nVeids: fiksēti\nKapitāls: 339 EUR",
         term: 7,
         rate: 2.0,
@@ -370,7 +380,7 @@ const ilgKartis=[
     },
     {
         id: 17,
-        nr: "PeļņasPortfelis",
+        nr: "Peļņas Portfelis",
         text: "Termiņš: 5 gadi\nProcentu likme: 3.4%\nVeids: fiksēti\nKapitāls: 315 EUR",
         term: 5,
         rate: 3.4,
@@ -379,7 +389,7 @@ const ilgKartis=[
     },
     {
         id: 18,
-        nr: "StabilaGlabātava",
+        nr: "Stabila Glabātava",
         text: "Termiņš: 8 gadi\nProcentu likme: 1.5%\nVeids: fiksēti\nKapitāls: 353 EUR",
         term: 8,
         rate: 1.5,
@@ -388,7 +398,7 @@ const ilgKartis=[
     },
     {
         id: 19,
-        nr: "PeļņasTilts",
+        nr: "Laimīgās Rezervācijas",
         text: "Termiņš: 6 gadi\nProcentu likme: 2.3%\nVeids: fiksēti\nKapitāls: 329 EUR",
         term: 6,
         rate: 2.3,
@@ -397,7 +407,7 @@ const ilgKartis=[
     },
     {
         id: 20,
-        nr: "ProcentuDrošība",
+        nr: "Noguldījumu Oāze",
         text: "Termiņš: 5 gadi\nProcentu likme: 3.2%\nVeids: fiksēti\nKapitāls: 340 EUR",
         term: 4,
         rate: 3.2,
@@ -414,18 +424,17 @@ let capital;
 let capital1;
 function jaunaKarts(){
     const vardsVal=vards.value;
-    // if (vardsVal.trim().length === 0) {
-    //     alert("Lūdzu ievadi savu vārdu!");
-    //     return;
-    // }
-    // if(klase=="nav"){
-    //     alert("Lūdzu ievadi klasi kurā mācies!");
-    //     return;
-    // }
+    if (vardsVal.trim().length === 0) {
+        alert("Lūdzu ievadi savu vārdu!");
+        return;
+    }
+    if(klase=="nav"){
+        alert("Lūdzu ievadi klasi kurā mācies!");
+        return;
+    }
     spele.style.display="none";
     velreiz.style.display="none";
-    end.style.display="none";
-    rezElement.style.display="none";
+    
 
     popup.style.display = 'none';
     overlay.style.display = 'none';
@@ -448,6 +457,7 @@ function jaunaKarts(){
             jaunaKartsBtn.innerText="Jauna kārts";
             jaunaKartsBtn.style.backgroundColor= "#ffc107";
             jaunaKartsBtn.style.color="initial";
+            popup.style.overflowY="hidden";
             uzd.style.display = "flex";
             uzd.style.display = "flex";
             div.style.display = "flex";
@@ -463,15 +473,16 @@ function jaunaKarts(){
             div.style.display = "none";
             //popup
             popup.style.display="block";
+            popup.style.overflowY="scroll";
             overlay.style.display="block";
             par="Spēles noteikumi";
             statuss.style.color="rgb(166, 146, 32)";
             statuss.innerText=par;
-            atb= "Izmantojot datus un salikto procentu formulu, nosaki un izvēlies ienesīgāko investīciju, lai termiņa beigās iegūtu maksimāli lielu naudas summu. Termiņš jānorāda gados. Par katru pareizu atbildi – 1 punkts. Spēles beigās uzzināsi iegūto un maksimālo iegūstamo summu. Veiksmi!";
+            atb= "Izmantojot datus un salikto procentu formulu, nosaki un izvēlies ienesīgāko investīciju! Aprēķinot summu termiņš jānorāda gados. Par katru pareizu atbildi – 1 punkts. Spēles beigās uzzināsi iegūtos punktus, naudas summu un maksimālo iegūstamo naudas summu par noguldījumiem. Veiksmi!";
             atbilde.innerText = atb; 
             atbilde.style.display="flex";
             jaunaKartsBtn.innerText="sākt";
-            jaunaKartsBtn.style.backgroundColor="green";
+            jaunaKartsBtn.style.backgroundColor="#218838";
             jaunaKartsBtn.style.color="white";
             questionNr=1;
         }
@@ -541,11 +552,18 @@ function jaunaKarts(){
 
 let pienBtn=document.getElementById("pienemt");
 let pienBtn1=document.getElementById("pienemt1");
+let selectedVal;
+let maxVal;
 pienBtn.addEventListener("click", pienemt);
 function pienemt(){
+    selectedVal=cardValue;
     if (cardValue>cardValue1){
         console.log("Atbilde ir pareiza");
         //alert("tu saproti ko dari");
+        //max value
+        maxVal=cardValue;
+        tableRez();
+
         summa=summa+cardValue;
         maxSumma=maxSumma+cardValue;
         console.log("summa:"+summa);
@@ -579,6 +597,10 @@ function pienemt(){
         console.log("Atbilde ir nepareiza");
         console.log("Iegūto punktu skaits: "+punkti)
         //alert("tu nesaproti ko dari!");
+        //max value
+        maxVal=cardValue1;
+        tableRez();
+
         maxSumma=maxSumma+cardValue1;
         console.log("Max summa:"+maxSumma);
         //popup
@@ -600,9 +622,14 @@ function pienemt(){
 }
 pienBtn1.addEventListener("click", pienemt1);
 function pienemt1(){
+    selectedVal=cardValue1;
     if (cardValue1>cardValue){
         console.log("Atbilde ir pareiza");
         //alert("tu saproti ko dari");
+        //max value
+        maxVal=cardValue1;
+        tableRez();
+
         summa=summa+cardValue1;
         maxSumma=maxSumma+cardValue1;
         console.log("summa:"+summa);
@@ -638,6 +665,10 @@ function pienemt1(){
     else{
         console.log("Atbilde ir nepareiza");
         //alert("tu nesaproti ko dari!");
+        //max value
+        maxVal=cardValue;
+        tableRez();
+
         maxSumma=maxSumma+cardValue1;
         console.log("Max summa:"+maxSumma);
         //popup
@@ -657,6 +688,87 @@ function pienemt1(){
     }
 //console.log("pienemts");
 }
+let columnCounter = 0;  // Tracks how many columns have been added
+
+// Function to add new columns every 3 values
+function tableRez() {
+    let table = document.getElementById("table");  // Get the table by ID
+    
+    // Add a new column after every 3 values
+    if (columnCounter % 3 === 0) {
+        // Add a new column header in the first row (Question number)
+        let lastHeader = table.querySelector("thead tr");  // Get the header row
+        let newHeader = document.createElement("th");
+        newHeader.scope = "col";
+        newHeader.innerText = questionNr;  // Set the dynamic question number
+        lastHeader.appendChild(newHeader);
+
+        // Add a new cell for "Iegūtais" in the first row of the body
+        let iegRow = table.querySelector("tbody tr:first-child");
+        let newCell = document.createElement("td");
+        newCell.innerText = selectedVal;  // Set the dynamic value for "Iegūtais"
+        if(selectedVal==maxVal){
+            newCell.style.backgroundColor="#218838";
+            newCell.style.color="white";
+        }
+        if(selectedVal<maxVal){
+            newCell.style.backgroundColor="#dc3545";
+            newCell.style.color="white";
+        }
+        iegRow.appendChild(newCell);
+
+        // Add a new cell for "Maksimālais" in the second row of the body
+        let maxRow = table.querySelector("tbody tr:nth-child(2)");  // Second row is for "Maksimālais"
+        newCell = document.createElement("td");
+        newCell.innerText = maxVal;  // Set the dynamic value for "Maksimālais"
+        if(selectedVal==maxVal){
+            newCell.style.backgroundColor="#218838";
+            newCell.style.color="white";
+        }
+        if(selectedVal<maxVal){
+            newCell.style.backgroundColor="#218838";
+            newCell.style.color="white";
+        }
+        maxRow.appendChild(newCell);
+    } else {
+        // If we've added a header, just add new cells to the existing rows
+        let lastHeader = table.querySelector("thead tr");  // Get the header row
+        let newHeader = document.createElement("th");
+        newHeader.innerText = questionNr;  // Set the dynamic question number
+        lastHeader.appendChild(newHeader);  // Add the new header
+
+        // Add the "Iegūtais" value to the existing row (first row)
+        let iegRow = table.querySelector("tbody tr:first-child");
+        let newCell = document.createElement("td");
+        newCell.innerText = selectedVal;  // Set the dynamic value for "Iegūtais"
+        if(selectedVal==maxVal){
+            newCell.style.backgroundColor="#218838";
+            newCell.style.color="white";
+        }
+        if(selectedVal<maxVal){
+            newCell.style.backgroundColor="#dc3545";
+            newCell.style.color="white";
+        }
+        iegRow.appendChild(newCell);
+
+        // Add the "Maksimālais" value to the existing row (second row)
+        let maxRow = table.querySelector("tbody tr:nth-child(2)");  // Second row is for "Maksimālais"
+        newCell = document.createElement("td");
+        newCell.innerText = maxVal;  // Set the dynamic value for "Maksimālais"
+        if(selectedVal==maxVal){
+            newCell.style.backgroundColor="#218838";
+            newCell.style.color="white";
+        }
+        if(selectedVal<maxVal){
+            newCell.style.backgroundColor="#218838";
+            newCell.style.color="white";
+        }
+        maxRow.appendChild(newCell);
+    }
+
+    // Increment the column counter
+    columnCounter++;
+}
 function beigas(){
     console.log("spēle beigusies");
     velreiz.style.display="flex";
@@ -667,17 +779,22 @@ function beigas(){
     atbilde.style.display="none";
     popup.style.display="none";
     overlay.style.display="none";
+    formula.style.display="none";
     summa=parseFloat(summa.toFixed(2));
     maxSumma=parseFloat(maxSumma.toFixed(2));
-        rez = "Iegūto punktu skaits: "+ punkti+"\n Spēles laikā iegūti "+summa+" EUR no iespējamiem "+maxSumma+" EUR";
+    rez = "Iegūto punktu skaits: "+ punkti+"\n Rezultāti:";
     rezElement.style.display="block";
     rezElement.innerText = rez; 
+    rez2 ="Spēles laikā iegūti "+summa+" EUR no iespējamiem "+maxSumma+" EUR";
+    rez2Element.style.display="block";
+    rez2Element.innerText = rez2; 
     procenti=(punkti/10)*100;
     procenti=procenti.toFixed(2);
     isProcenti=(isPunkti/5)*100;
     ilgProcenti=(ilgPunkti/5)*100;
-    savetoDb();
+    table.style.display="block";
     end.style.display="block";
+    savetoDb();
     questionNr=1;
     punkti=0;
     isPunkti=0;
