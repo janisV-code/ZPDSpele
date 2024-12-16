@@ -1113,7 +1113,7 @@ function savetoDb() {
     saveObj.ilgTermProcenti
   )}&iegutaNauda=${encodeURIComponent(saveObj.iegutaNauda)}&key=janis123`;
 
-       const apiUrl = "https://programmesana2.lv/api/janis";
+       apiUrl = "https://programmesana2.lv/api/janis";
     
         fetch(apiUrl, {
             method: "POST",
