@@ -8,17 +8,6 @@ body {
     text-align: center; /* Centrēts visam tekstam */
     background-color: rgb(193, 184, 184);
 }
-#top-right-text {
-    position: absolute; /* Nostiprina elementu relatīvi pie body */
-    top: 50px; /* Attālums no augšas */
-    right: 102px; /* Attālums no labās malas */
-    font-size: 1.2rem; /* Teksta izmērs */
-    color: #333; /* Teksta krāsa */
-    background: rgba(255, 255, 255, 0.8); /* Fona krāsa ar nelielu caurspīdīgumu */
-    padding: 5px 10px; /* Iekšējā atstarpe */
-    border-radius: 5px; /* Apaļi stūri, ja nepieciešams */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Neliela ēna, ja vēlies */
-}
 /* Popup Styling */
 .popup {
     display: flex;
