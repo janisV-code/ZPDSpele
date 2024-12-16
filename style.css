@@ -26,6 +26,7 @@ body {
     border-radius: 10px;
     z-index: 1000;
     text-align: center;
+    overflow-y:auto;
 }
 
 .popup h1 {
@@ -287,6 +288,9 @@ button {
     #jaut{
         margin-top:15%
     }
+    .popup{
+        overflow-y:auto;
+    }
 }
 @media (max-width: 576px) {
     h1 {
@@ -310,6 +314,9 @@ button {
         height:auto;
     }
     #jaut{
-        margin-top:15%
+        margin-top:15%;
+    }
+    .popup{
+        overflow-y:auto;
     }
 }
