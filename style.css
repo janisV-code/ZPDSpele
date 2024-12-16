@@ -313,4 +313,8 @@ button {
     #vel {
         width: 90%; /* Full-width retry button on small screens */
     }
+        #formula{
+        max-width:25%;
+        height:auto;
+}
 }
