@@ -1,6 +1,6 @@
 /* General body styling */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'cambiri';
     background: #f7f8fa;
     margin: 0;
     padding: 0;
@@ -91,9 +91,20 @@ body {
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
     max-width: 90%;
-    overflow: hidden;
+    overflow:hidden;
+    position:relative;
 }
 
+#formula{
+    position: absolute; /* Precīza pozicionēšana */
+    top: 10px; /* Attālums no augšas */
+    right: 10px; /* Attālums no kreisās malas */
+    border-radius: 8px; /* Opcija: apaļi stūri */
+    max-width: 20%; /* Ensures the image scales to fit */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: contain; /* Ensures the image fits nicely in its container */
+    z-index: 1;
+}
 .kaste1 {
     text-align: center;
 }
@@ -103,6 +114,7 @@ h1 {
     margin-bottom: 20px;
     color: rgb(166, 146, 32);
     font-size: 3.5rem; /* Lielāks h1 */
+    z-index: 2;
 }
 
 h2, h3 {
@@ -199,7 +211,7 @@ button {
 }
 
 .card {
-    background: #ffffff;
+    background: rgb(243, 231, 215);
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
@@ -225,7 +237,7 @@ button {
 
 .card-title {
     font-size: 1.7rem; /* Lielāks fonta izmērs */
-    color: rgb(166, 146, 32);
+    color: rgb(240, 70, 52);
     margin-bottom: 10px;
     text-align: center;
 }
