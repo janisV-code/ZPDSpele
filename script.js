@@ -798,7 +798,7 @@ function beigas(){
     table.style.overflowX="scroll";
     table.style.display="block";
     end.style.display="block";
-    //savetoDb();
+    savetoDb();
     questionNr=1;
     punkti=0;
     isPunkti=0;
