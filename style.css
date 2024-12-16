@@ -100,7 +100,7 @@ body {
     top: 10px; /* Attālums no augšas */
     right: 10px; /* Attālums no kreisās malas */
     border-radius: 8px; /* Opcija: apaļi stūri */
-    max-width: 25%; /* Ensures the image scales to fit */
+    max-width: 15%; /* Ensures the image scales to fit */
     height: auto; /* Maintains aspect ratio */
     object-fit: contain; /* Ensures the image fits nicely in its container */
     z-index: 1;
@@ -292,7 +292,7 @@ button {
         width: calc(50% - 20px); /* Adjust for medium-sized screens */
     }
     #formula{
-        max-width:15%;
+        max-width:25%;
         height:auto;
 }
 
