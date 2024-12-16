@@ -302,8 +302,10 @@ button {
     #vel {
         width: 90%; /* Full-width retry button on small screens */
     }
-        #formula{
+    #formula{
         max-width:28%;
         height:auto;
-}
+    }
+    #jaut{
+        margin-top:10%
 }
