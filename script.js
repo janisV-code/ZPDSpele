@@ -478,7 +478,7 @@ function jaunaKarts(){
             par="Spēles noteikumi";
             statuss.style.color="rgb(166, 146, 32)";
             statuss.innerText=par;
-            atb= "Izmantojot datus un salikto procentu formulu, nosaki un izvēlies ienesīgāko investīciju! Aprēķinot summu termiņš jānorāda gados. Par katru pareizu atbildi – 1 punkts. Spēles beigās uzzināsi iegūtos punktus, naudas summu un maksimālo iegūstamo naudas summu par noguldījumiem. Veiksmi!";
+            atb= "Izmantojot datus un salikto procentu formulu, nosaki un izvēlies ienesīgāko investīciju! Aprēķinot summu noguldījuma termiņš jānorāda gados. Par katru pareizu atbildi – 1 punkts. Spēles beigās uzzināsi iegūtos punktus un naudas summu, kā arī maksimālo iegūstamo naudas summu par noguldījumiem. Veiksmi!";
             atbilde.innerText = atb; 
             atbilde.style.display="flex";
             jaunaKartsBtn.innerText="sākt";
