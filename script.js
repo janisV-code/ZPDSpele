@@ -94,7 +94,7 @@ const isKartis=[
         term: 12,
         rate: 10.0,
         capital: 347,
-        value: 381.7 // Aprēķins: 347 * (1 + 0.10)^(12/12)
+        value: 375.68 // Aprēķins: 347 * (1 + 0.10)^(10/12)
     },
     {
         id: 6,
