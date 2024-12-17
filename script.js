@@ -256,7 +256,7 @@ const ilgKartis=[
         id: 3,
         nr: "DrošībaMax",
         text: "Termiņš: 3 gadi\nProcentu likme: 1,9%\nVeids: fiksēti\nKapitāls: 360 EUR",
-        term: 7,
+        term: 3,
         rate: 1.9,
         capital: 360,
         value: 380.91  // Aprēķins: 360 * (1 + 0.019)^3
@@ -265,7 +265,7 @@ const ilgKartis=[
         id: 4,
         nr: "Bankas Sapnis",
         text: "Termiņš: 3 gadi\nProcentu likme: 1,5%\nVeids: fiksēti\nKapitāls: 375 EUR",
-        term: 8,
+        term: 3,
         rate: 1.5,
         capital: 375,
         value: 392.13 // Aprēķins: 375 * (1 + 0.015)^3 NEDER
@@ -318,11 +318,11 @@ const ilgKartis=[
     {
         id: 10,
         nr: "Naudas Kalns",
-        text: "Termiņš: 7 gadi\nProcentu likme: 2,2%\nVeids: fiksēti\nKapitāls: 355 EUR",
-        term: 7,
+        text: "Termiņš: 5 gadi\nProcentu likme: 2,2%\nVeids: fiksēti\nKapitāls: 355 EUR",
+        term: 5,
         rate: 2.2,
         capital: 355,
-        value: 391.99  // Aprēķins: 355 * (1 + 0.022)^7
+        value: 395.81  // Aprēķins: 355 * (1 + 0.022)^5
     },
     {
         id: 11,
@@ -408,8 +408,8 @@ const ilgKartis=[
     {
         id: 20,
         nr: "Noguldījumu Oāze",
-        text: "Termiņš: 5 gadi\nProcentu likme: 3,2%\nVeids: fiksēti\nKapitāls: 340 EUR",
-        term: 4,
+        text: "Termiņš: 3 gadi\nProcentu likme: 3,2%\nVeids: fiksēti\nKapitāls: 340 EUR",
+        term: 3,
         rate: 3.2,
         capital: 340,
         value: 373.70  // Aprēķins: 340 * (1 + 0.032)^3
