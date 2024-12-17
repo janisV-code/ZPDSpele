@@ -419,7 +419,7 @@ const ilgKartis=[
 //definē ārpus funkcijas vēlākai izmantošanai
 let cardValue;
 let cardValue1;
-let questionNr=0;
+let questionNr=-1;
 let capital;
 let capital1;
 let uzdevums;
@@ -457,40 +457,68 @@ function jaunaKarts(){
         jautElement.style.display = "flex";
         jaut = "Investīcija NR " + questionNr;
         jautElement.innerText = jaut;
-        if(questionNr==1){
-            jaunaKartsBtn.innerText="Jauna kārts";
-            jaunaKartsBtn.style.backgroundColor= "#ffc107";
-            jaunaKartsBtn.style.color="initial";
-            popup.style.overflowY="hidden";
-            uzd.style.display = "flex";
-            uzd.style.display = "flex";
-            div.style.display = "flex";
-            formula.style.display="flex";
-            console.log("spēlētāja vārds ir ",vards.value);
-            console.log("sākas jautājumi par īstermiņa noguldījumiem");
-            console.log("spēlētājs ir ",klase," skolnieks/ce");
-        }
-        if (questionNr == 0) {
+        if(questionNr==0){
             jautElement.style.display = "none";
-            uzd.style.display = "none";
             uzd.style.display = "none";
             div.style.display = "none";
             //popup
             popup.style.display="block";
             popup.style.overflowY="scroll";
             overlay.style.display="block";
+
+            par="Formulas skaidrojums";
+            statuss.style.color="rgb(166, 146, 32)";
+            statuss.innerText=par;
+
+            atb= "A-Iegūtā naudas summa no noguldījuma\n S-Sākotnējais kapitāls\n r-Procentu likme\n n-Termiņš (gados)";
+            atbilde.innerText = atb; 
+            atbilde.style.display="flex";
+
+            jaunaKartsBtn.style.display="flex";
+            jaunaKartsBtn.innerText="Sākt";
+            jaunaKartsBtn.style.backgroundColor="#218838";
+            jaunaKartsBtn.style.color="white";
+
+            questionNr = 1;
+        }
+        else if(questionNr ==-1) {
+            jautElement.style.display = "none";
+            uzd.style.display = "none";
+            div.style.display = "none";
+            //popup
+            popup.style.overflowY="hidden";
+            popup.style.display="block";
+            popup.style.overflowY="scroll";
+            overlay.style.display="block";
+
             par="Spēles noteikumi";
             statuss.style.color="rgb(166, 146, 32)";
             statuss.innerText=par;
+
             atb= "Izmantojot datus un salikto procentu formulu, nosaki un izvēlies ienesīgāko investīciju! Aprēķinot summu termiņš jānorāda gados. Par katru pareizu atbildi – 1 punkts. Spēles beigās uzzināsi iegūtos punktus, naudas summu un maksimālo iegūstamo naudas summu par noguldījumiem. Veiksmi!";
             atbilde.innerText = atb; 
             atbilde.style.display="flex";
-            jaunaKartsBtn.innerText="sākt";
+
+            jaunaKartsBtn.style.display="flex";
+            jaunaKartsBtn.innerText="Turpināt";
             jaunaKartsBtn.style.backgroundColor="#218838";
             jaunaKartsBtn.style.color="white";
-            questionNr=1;
+
+            questionNr = 0;
         }
-        if (questionNr < 6) {
+        else if(questionNr===1){
+            jaunaKartsBtn.innerText="Jauna kārts";
+            jaunaKartsBtn.style.backgroundColor= "#ffc107";
+            jaunaKartsBtn.style.color="initial";
+            uzd.style.display = "flex";
+            uzd.style.display = "flex";
+            div.style.display = "flex";
+            formula.style.display="flex";
+            console.log("spēlētāja vārds ir ",vards.value);
+            console.log("sākas jautājumi par ilgtermiņa noguldījumiem");
+            console.log("spēlētājs ir ",klase," skolnieks/ce");
+        }
+        if (questionNr>0 && questionNr < 6) {
             uzdevums="Izvēlies ienesīgāko ilgtermiņa noguldījumu, balstoties uz doto informāciju!";
             uzd.innerText=uzdevums;
             // kārts 1
@@ -522,9 +550,9 @@ function jaunaKarts(){
         }
     
         if (questionNr == 6) {
-            console.log("sākas jautājumi par ilgtermiņa noguldījumiem");
+            console.log("sākas jautājumi par īstermiņa noguldījumiem");
         }
-    
+
         if (questionNr > 5) {
             uzdevums="Izvēlies ienesīgāko īstermiņa noguldījumu, balstoties uz doto informāciju!";
             uzd.innerText=uzdevums;
@@ -557,6 +585,7 @@ function jaunaKarts(){
         }
     }
 }
+
 
 let pienBtn=document.getElementById("pienemt");
 let pienBtn1=document.getElementById("pienemt1");
