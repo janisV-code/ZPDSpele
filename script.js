@@ -733,7 +733,7 @@ function pienemt1(){
         statuss.style.color="rgb(208, 22, 22)";
         statuss.innerText=par;
         if(questionNr==5){
-            atb= "Pamatojums: "+cardValue1+" < "+cardValue+" \n Iegūtais punktu skaits: "+punkti;
+            atb= "Pamatojums: "+cardValue1+" < "+cardValue+" \n Iegūtais punktu skaits: "+punkti+"\n Pārliecinies, ka noguldījuma termiņa vērtība izteikta gados (Term/12)!";
         }
         else if(questionNr>5){
             atb= "Pamatojums: "+cardValue1+" < "+cardValue+" \n Iegūtais punktu skaits: "+punkti+"\n Pārliecinies, ka noguldījuma termiņa vērtība izteikta gados (Term/12)!";
