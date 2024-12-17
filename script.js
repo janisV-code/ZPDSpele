@@ -255,7 +255,7 @@ const ilgKartis=[
     {
         id: 3,
         nr: "DrošībaMax",
-        text: "Termiņš: 7 gadi\nProcentu likme: 1,9%\nVeids: fiksēti\nKapitāls: 360 EUR",
+        text: "Termiņš: 3 gadi\nProcentu likme: 1,9%\nVeids: fiksēti\nKapitāls: 360 EUR",
         term: 7,
         rate: 1.9,
         capital: 360,
@@ -264,7 +264,7 @@ const ilgKartis=[
     {
         id: 4,
         nr: "Bankas Sapnis",
-        text: "Termiņš: 8 gadi\nProcentu likme: 1,5%\nVeids: fiksēti\nKapitāls: 375 EUR",
+        text: "Termiņš: 3 gadi\nProcentu likme: 1,5%\nVeids: fiksēti\nKapitāls: 375 EUR",
         term: 8,
         rate: 1.5,
         capital: 375,
