@@ -611,8 +611,6 @@ function pienemt(){
             console.log("Iegūto ilgpunktu skaits: "+ilgPunkti);
         }
         if(5<questionNr&&questionNr<11){
-            ilgPunkti=ilgPunkti+1;
-            console.log("Iegūto ilgpunktu skaits: "+ilgPunkti);
             isPunkti=isPunkti+1;
             console.log("Iegūto ispunktu skaits: "+isPunkti);
         }
@@ -624,7 +622,7 @@ function pienemt(){
         statuss.style.color="green";
         statuss.innerText=par;
         if(questionNr==5){
-            atb= "Pamatojums: "+cardValue+" < "+cardValue1+" \n Iegūtais punktu skaits: "+punkti+"\nTurpmākās investīcijas būs īstermiņa noguldījumi!\n Ņem vērā, ka noguldījuma termiņa vērtība jāizsaka gados!";
+            atb= "Pamatojums: "+cardValue+" > "+cardValue1+" \n Iegūtais punktu skaits: "+punkti+"\nTurpmākās investīcijas būs īstermiņa noguldījumi!\n Ņem vērā, ka noguldījuma termiņa vērtība jāizsaka gados!";
         }
         else{
         atb= "Pamatojums: "+cardValue+" < "+cardValue1+" \n Iegūtais punktu skaits: "+punkti;
