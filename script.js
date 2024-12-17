@@ -491,7 +491,7 @@ function jaunaKarts(){
             questionNr=1;
         }
         if (questionNr < 6) {
-            uzdevums="Izvēlies ilgtermiņa ienesīgāko noguldījumu, balstoties uz doto informāciju!";
+            uzdevums="Izvēlies ienesīgāko ilgtermiņa noguldījumu, balstoties uz doto informāciju!";
             uzd.innerText=uzdevums;
             // kārts 1
             let rnd = Math.floor(Math.random() * ilgKartis.length);
@@ -526,7 +526,7 @@ function jaunaKarts(){
         }
     
         if (questionNr > 5) {
-            uzdevums="Izvēlies īstermiņa ienesīgāko noguldījumu, balstoties uz doto informāciju!";
+            uzdevums="Izvēlies ienesīgāko īstermiņa noguldījumu, balstoties uz doto informāciju!";
             uzd.innerText=uzdevums;
             // kārts 1
             let rnd = Math.floor(Math.random() * isKartis.length);
