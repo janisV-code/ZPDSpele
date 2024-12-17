@@ -422,6 +422,7 @@ let cardValue1;
 let questionNr=0;
 let capital;
 let capital1;
+let uzdevums;
 function jaunaKarts(){
     const vardsVal=vards.value;
     if (vardsVal.trim().length === 0) {
@@ -490,39 +491,8 @@ function jaunaKarts(){
             questionNr=1;
         }
         if (questionNr < 6) {
-            // kārts 1
-            let rnd = Math.floor(Math.random() * isKartis.length);
-            const cardInView = isKartis[rnd];
-            cardValue = cardInView.value;
-            capital=cardInView.capital;
-            console.log("1. kārts vērtība: ", cardValue);
-            let virsraksts = document.getElementById("card-title");
-            virsraksts.innerText = cardInView.nr;
-            let teksts = document.getElementById("card-text");
-            teksts.innerText = cardInView.text;
-    
-            // kārts 2
-            let rnd1;
-            do {
-                rnd1 = Math.floor(Math.random() * isKartis.length);
-            } while (rnd1 === rnd);
-            const cardInView1 = isKartis[rnd1];
-            cardValue1 = cardInView1.value;
-            capital1=cardInView1.capital;
-            console.log("2. kārts vērtība: ", cardValue1);
-            let virsraksts1 = document.getElementById("card-title1");
-            virsraksts1.innerText = cardInView1.nr;
-            let teksts1 = document.getElementById("card-text1");
-            teksts1.innerText = cardInView1.text;
-    
-            jaunaKartsBtn.style.display = "flex";
-        }
-    
-        if (questionNr == 6) {
-            console.log("sākas jautājumi par ilgtermiņa noguldījumiem");
-        }
-    
-        if (questionNr > 5 && questionNr < 11) {
+            uzdevums="Izvēlies ilgtermiņa ienesīgāko noguldījumu, balstoties uz doto informāciju!";
+            uzd.innerText=uzdevums;
             // kārts 1
             let rnd = Math.floor(Math.random() * ilgKartis.length);
             const cardInView = ilgKartis[rnd];
@@ -540,6 +510,41 @@ function jaunaKarts(){
                 rnd1 = Math.floor(Math.random() * ilgKartis.length);
             } while (rnd1 === rnd);
             const cardInView1 = ilgKartis[rnd1];
+            cardValue1 = cardInView1.value;
+            capital1=cardInView1.capital;
+            console.log("2. kārts vērtība: ", cardValue1);
+            let virsraksts1 = document.getElementById("card-title1");
+            virsraksts1.innerText = cardInView1.nr;
+            let teksts1 = document.getElementById("card-text1");
+            teksts1.innerText = cardInView1.text;
+    
+            jaunaKartsBtn.style.display = "flex";
+        }
+    
+        if (questionNr == 6) {
+            console.log("sākas jautājumi par ilgtermiņa noguldījumiem");
+        }
+    
+        if (questionNr > 5) {
+            uzdevums="Izvēlies īstermiņa ienesīgāko noguldījumu, balstoties uz doto informāciju!";
+            uzd.innerText=uzdevums;
+            // kārts 1
+            let rnd = Math.floor(Math.random() * isKartis.length);
+            const cardInView = isKartis[rnd];
+            cardValue = cardInView.value;
+            capital=cardInView.capital;
+            console.log("1. kārts vērtība: ", cardValue);
+            let virsraksts = document.getElementById("card-title");
+            virsraksts.innerText = cardInView.nr;
+            let teksts = document.getElementById("card-text");
+            teksts.innerText = cardInView.text;
+    
+            // kārts 2
+            let rnd1;
+            do {
+                rnd1 = Math.floor(Math.random() * isKartis.length);
+            } while (rnd1 === rnd);
+            const cardInView1 = isKartis[rnd1];
             cardValue1 = cardInView1.value;
             capital1=cardInView1.capital;
             console.log("2. kārts vērtība: ", cardValue1);
@@ -573,12 +578,14 @@ function pienemt(){
         console.log("Max summa:"+maxSumma);
         punkti=punkti + 1;
         if(questionNr<6){
-            isPunkti=isPunkti+1;
-            console.log("Iegūto ispunktu skaits: "+isPunkti);
+            ilgPunkti=ilgPunkti+1;
+            console.log("Iegūto ilgpunktu skaits: "+ilgPunkti);
         }
         if(5<questionNr&&questionNr<11){
             ilgPunkti=ilgPunkti+1;
             console.log("Iegūto ilgpunktu skaits: "+ilgPunkti);
+            isPunkti=isPunkti+1;
+            console.log("Iegūto ispunktu skaits: "+isPunkti);
         }
         console.log("Iegūto punktu skaits: "+punkti);
         //popup
@@ -587,7 +594,12 @@ function pienemt(){
         par="Atbilde ir pareiza!";
         statuss.style.color="green";
         statuss.innerText=par;
-        atb= "Pamatojums: "+cardValue+" > "+cardValue1+"\n Iegūtais punktu skaits: "+punkti;
+        if(questionNr==5){
+            atb= "Pamatojums: "+cardValue+" < "+cardValue1+" \n Iegūtais punktu skaits: "+punkti+"\nTurpmākās investīcijas būs īstermiņa noguldījumi!\n Ņem vērā, ka noguldījuma termiņa vērtība jāizsaka gados!";
+        }
+        else{
+        atb= "Pamatojums: "+cardValue+" < "+cardValue1+" \n Iegūtais punktu skaits: "+punkti;
+        }
         atbilde.innerText = atb; 
         atbilde.style.display="flex";
         questionNr = questionNr + 1;
@@ -612,7 +624,12 @@ function pienemt(){
         par="Atbilde nav pareiza!";
         statuss.style.color="rgb(208, 22, 22)";
         statuss.innerText=par;
+        if(questionNr==5){
+            atb= "Pamatojums: "+cardValue+" < "+cardValue1+" \n Iegūtais punktu skaits: "+punkti+"\n Turpmākās investīcijas būs īstermiņa noguldījumi!\n Ņem vērā, ka noguldījuma termiņa vērtība jāizsaka gados!";
+        }
+        else{
         atb= "Pamatojums: "+cardValue+" < "+cardValue1+" \n Iegūtais punktu skaits: "+punkti;
+        }
         atbilde.innerText = atb; 
         atbilde.style.display="flex";
         questionNr = questionNr + 1;
@@ -639,12 +656,12 @@ function pienemt1(){
         console.log("Max summa:"+maxSumma);
         punkti=punkti + 1;
         if(questionNr<6){
-            isPunkti=isPunkti+1;
-            console.log("Iegūto ispunktu skaits: "+isPunkti);
-        }
-        if(5<questionNr&&questionNr<11){
             ilgPunkti=ilgPunkti+1;
             console.log("Iegūto ilgpunktu skaits: "+ilgPunkti);
+        }
+        if(5<questionNr&&questionNr<11){
+            isPunkti=isPunkti+1;
+            console.log("Iegūto ispunktu skaits: "+isPunkti);
         }
         console.log("Iegūto punktu skaits: "+punkti);
         console.log("Iegūto ispunktu skaits: "+isPunkti);
@@ -654,7 +671,12 @@ function pienemt1(){
         par="Atbilde ir pareiza!";
         statuss.style.color="green";
         statuss.innerText=par;
-        atb= "Pamatojums: "+cardValue+" < "+cardValue1+"\n Iegūtais punktu skaits: "+punkti;
+        if(questionNr==5){
+            atb= "Pamatojums: "+cardValue+" < "+cardValue1+" \n Iegūtais punktu skaits: "+punkti+"\nTurpmākās investīcijas būs īstermiņa noguldījumi!\n Ņem vērā, ka noguldījuma termiņa vērtība jāizsaka gados!";
+        }
+        else{
+        atb= "Pamatojums: "+cardValue+" < "+cardValue1+" \n Iegūtais punktu skaits: "+punkti;
+        }
         atbilde.innerText = atb; 
         atbilde.style.display="flex";
         questionNr = questionNr + 1;
@@ -680,7 +702,12 @@ function pienemt1(){
         par="Atbilde nav pareiza!";
         statuss.style.color="rgb(208, 22, 22)";
         statuss.innerText=par;
-        atb= "Pamatojums: "+cardValue+" > "+cardValue1+" \n Iegūtais punktu skaits: "+punkti;
+        if(questionNr==5){
+            atb= "Pamatojums: "+cardValue+" < "+cardValue1+" \n Iegūtais punktu skaits: "+punkti+"\nTurpmākās investīcijas būs īstermiņa noguldījumi!\n Ņem vērā, ka noguldījuma termiņa vērtība jāizsaka gados!";
+        }
+        else{
+        atb= "Pamatojums: "+cardValue+" < "+cardValue1+" \n Iegūtais punktu skaits: "+punkti;
+        }
         atbilde.innerText = atb; 
         atbilde.style.display="flex";
         questionNr = questionNr + 1;
