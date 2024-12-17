@@ -259,7 +259,7 @@ const ilgKartis=[
         term: 7,
         rate: 1.9,
         capital: 360,
-        value: 366.84  // Aprēķins: 360 * (1 + 0.019)^7
+        value: 380.91  // Aprēķins: 360 * (1 + 0.019)^3
     },
     {
         id: 4,
@@ -268,7 +268,7 @@ const ilgKartis=[
         term: 8,
         rate: 1.5,
         capital: 375,
-        value: 398.82  // Aprēķins: 375 * (1 + 0.015)^8 NEDER
+        value: 392.13 // Aprēķins: 375 * (1 + 0.015)^3 NEDER
     },
     {
         id: 5,
