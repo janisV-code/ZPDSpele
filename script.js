@@ -54,7 +54,7 @@ const isKartis=[
     {
         id: 1,
         nr: "Finanšu Pavasaris",
-        text: "Termiņš: 9 mēneši\nProcentu likme: 5.0%\nVeids: fiksēti\nKapitāls: 340 EUR",
+        text: "Termiņš: 9 mēneši\nProcentu likme: 5,0%\nVeids: fiksēti\nKapitāls: 340 EUR",
         term: 9,
         rate: 5.0,
         capital: 340,
@@ -63,7 +63,7 @@ const isKartis=[
     {
         id: 2,
         nr: "Procentu Pērle",
-        text: "Termiņš: 6 mēneši\nProcentu likme: 7.5%\nVeids: fiksēti\nKapitāls: 362 EUR",
+        text: "Termiņš: 6 mēneši\nProcentu likme: 7,5%\nVeids: fiksēti\nKapitāls: 362 EUR",
         term: 6,
         rate: 7.5,
         capital: 362,
@@ -72,7 +72,7 @@ const isKartis=[
     {
         id: 3,
         nr: "Noguldījumu Zvaigzne",
-        text: "Termiņš: 8 mēneši\nProcentu likme: 6.0%\nVeids: fiksēti\nKapitāls: 384 EUR",
+        text: "Termiņš: 8 mēneši\nProcentu likme: 6,0%\nVeids: fiksēti\nKapitāls: 384 EUR",
         term: 8,
         rate: 6.0,
         capital: 384,
@@ -81,7 +81,7 @@ const isKartis=[
     {
         id: 4,
         nr: "Naudas medības",
-        text: "Termiņš: 10 mēneši\nProcentu likme: 8.5%\nVeids: fiksēti\nKapitāls: 341 EUR",
+        text: "Termiņš: 10 mēneši\nProcentu likme: 8,5%\nVeids: fiksēti\nKapitāls: 341 EUR",
         term: 10,
         rate: 8.5,
         capital: 341,
@@ -90,7 +90,7 @@ const isKartis=[
     {
         id: 5,
         nr: "Loterija",
-        text: "Termiņš: 12 mēneši\nProcentu likme: 10.0%\nVeids: fiksēti\nKapitāls: 347 EUR",
+        text: "Termiņš: 12 mēneši\nProcentu likme: 10,0%\nVeids: fiksēti\nKapitāls: 347 EUR",
         term: 12,
         rate: 10.0,
         capital: 347,
@@ -99,7 +99,7 @@ const isKartis=[
     {
         id: 6,
         nr: "Zelta Banka",
-        text: "Termiņš: 7 mēneši\nProcentu likme: 9.5%\nVeids: fiksēti\nKapitāls: 351 EUR",
+        text: "Termiņš: 7 mēneši\nProcentu likme: 9,5%\nVeids: fiksēti\nKapitāls: 351 EUR",
         term: 7,
         rate: 9.5,
         capital: 351,
@@ -108,7 +108,7 @@ const isKartis=[
     {
         id: 7,
         nr: "Plūstošais Finansists",
-        text: "Termiņš: 9 mēneši\nProcentu likme: 11.0%\nVeids: fiksēti\nKapitāls: 361 EUR",
+        text: "Termiņš: 9 mēneši\nProcentu likme: 11,0%\nVeids: fiksēti\nKapitāls: 361 EUR",
         term: 9,
         rate: 11.0,
         capital: 361,
@@ -117,7 +117,7 @@ const isKartis=[
     {
         id: 8,
         nr: "Fonds, ko nevari atrast",
-        text: "Termiņš: 5 mēneši\nProcentu likme: 10.5%\nVeids: fiksēti\nKapitāls: 345 EUR",
+        text: "Termiņš: 5 mēneši\nProcentu likme: 10,5%\nVeids: fiksēti\nKapitāls: 345 EUR",
         term: 5,
         rate: 10.5,
         capital: 345,
@@ -126,7 +126,7 @@ const isKartis=[
     {
         id: 9,
         nr: "Fiksētais Ekonomists",
-        text: "Termiņš: 11 mēneši\nProcentu likme: 12.5%\nVeids: fiksēti\nKapitāls: 339 EUR",
+        text: "Termiņš: 11 mēneši\nProcentu likme: 12,5%\nVeids: fiksēti\nKapitāls: 339 EUR",
         term: 11,
         rate: 12.5,
         capital: 339,
@@ -135,7 +135,7 @@ const isKartis=[
     {
         id: 10,
         nr: "Uzticies man, brāl",
-        text: "Termiņš: 8 mēneši\nProcentu likme: 5.5%\nVeids: fiksēti\nKapitāls: 378 EUR",
+        text: "Termiņš: 8 mēneši\nProcentu likme: 5,5%\nVeids: fiksēti\nKapitāls: 378 EUR",
         term: 8,
         rate: 5.5,
         capital: 378,
@@ -144,7 +144,7 @@ const isKartis=[
     {
         id: 11,
         nr: "Noguldījumu Eksperts",
-        text: "Termiņš: 7 mēneši\nProcentu likme: 8.5%\nVeids: fiksēti\nKapitāls: 348 EUR",
+        text: "Termiņš: 7 mēneši\nProcentu likme: 8,5%\nVeids: fiksēti\nKapitāls: 348 EUR",
         term: 7,
         rate: 8.5,
         capital: 348,
@@ -153,7 +153,7 @@ const isKartis=[
     {
         id: 12,
         nr: "Procentu Dinamika",
-        text: "Termiņš: 8 mēneši\nProcentu likme: 9.0%\nVeids: fiksēti\nKapitāls: 353 EUR",
+        text: "Termiņš: 8 mēneši\nProcentu likme: 9,0%\nVeids: fiksēti\nKapitāls: 353 EUR",
         term: 8,
         rate: 9.0,
         capital: 353,
@@ -162,7 +162,7 @@ const isKartis=[
     {
         id: 13,
         nr: "Caurā krājkase",
-        text: "Termiņš: 9 mēneši\nProcentu likme: 9.5%\nVeids: fiksēti\nKapitāls: 362 EUR",
+        text: "Termiņš: 9 mēneši\nProcentu likme: 9,5%\nVeids: fiksēti\nKapitāls: 362 EUR",
         term: 9,
         rate: 9.5,
         capital: 362,
@@ -171,7 +171,7 @@ const isKartis=[
     {
         id: 14,
         nr: "Ienesīgā Kase",
-        text: "Termiņš: 10 mēneši\nProcentu likme: 10.0%\nVeids: fiksēti\nKapitāls: 332 EUR",
+        text: "Termiņš: 10 mēneši\nProcentu likme: 10,0%\nVeids: fiksēti\nKapitāls: 332 EUR",
         term: 10,
         rate: 10.0,
         capital: 332,
@@ -180,7 +180,7 @@ const isKartis=[
     {
         id: 15,
         nr: "Zvaigžņu Finanšu Plāns",
-        text: "Termiņš: 6 mēneši\nProcentu likme: 10.5%\nVeids: fiksēti\nKapitāls: 376 EUR",
+        text: "Termiņš: 6 mēneši\nProcentu likme: 10,5%\nVeids: fiksēti\nKapitāls: 376 EUR",
         term: 6,
         rate: 10.5,
         capital: 376,
@@ -189,7 +189,7 @@ const isKartis=[
     {
         id: 16,
         nr: "Tūlītējais Peļņas Rezervāts",
-        text: "Termiņš: 7 mēneši\nProcentu likme: 7.0%\nVeids: fiksēti\nKapitāls: 353 EUR",
+        text: "Termiņš: 7 mēneši\nProcentu likme: 7,0%\nVeids: fiksēti\nKapitāls: 353 EUR",
         term: 7,
         rate: 7.0,
         capital: 353,
@@ -198,7 +198,7 @@ const isKartis=[
     {
         id: 17,
         nr: "Finanšu Stūrakmens",
-        text: "Termiņš: 8 mēneši\nProcentu likme: 7.5%\nVeids: fiksēti\nKapitāls: 362 EUR",
+        text: "Termiņš: 8 mēneši\nProcentu likme: 7,5%\nVeids: fiksēti\nKapitāls: 362 EUR",
         term: 8,
         rate: 7.5,
         capital: 362,
@@ -207,7 +207,7 @@ const isKartis=[
     {
         id: 18,
         nr: "Mazumiņa fonds",
-        text: "Termiņš: 9 mēneši\nProcentu likme: 8.0%\nVeids: fiksēti\nKapitāls: 377 EUR",
+        text: "Termiņš: 9 mēneši\nProcentu likme: 8,0%\nVeids: fiksēti\nKapitāls: 377 EUR",
         term: 9,
         rate: 8.0,
         capital: 377,
@@ -216,7 +216,7 @@ const isKartis=[
     {
         id: 19,
         nr: "Peļņas Perspektīva",
-        text: "Termiņš: 10 mēneši\nProcentu likme: 8.5%\nVeids: fiksēti\nKapitāls: 333 EUR",
+        text: "Termiņš: 10 mēneši\nProcentu likme: 8,5%\nVeids: fiksēti\nKapitāls: 333 EUR",
         term: 10,
         rate: 8.5,
         capital: 333,
@@ -225,7 +225,7 @@ const isKartis=[
     {
         id: 20,
         nr: "Gada Dārgakmens",
-        text: "Termiņš: 6 mēneši\nProcentu likme: 9.0%\nVeids: fiksēti\nKapitāls: 356 EUR",
+        text: "Termiņš: 6 mēneši\nProcentu likme: 9,0%\nVeids: fiksēti\nKapitāls: 356 EUR",
         term: 6,
         rate: 9.0,
         capital: 356,
@@ -237,7 +237,7 @@ const ilgKartis=[
     {
         id: 1,
         nr: "SapņuSeifs",
-        text: "Termiņš: 6 gadi\nProcentu likme: 2.3%\nVeids: fiksēti\nKapitāls: 345 EUR",
+        text: "Termiņš: 6 gadi\nProcentu likme: 2,3%\nVeids: fiksēti\nKapitāls: 345 EUR",
         term: 6,
         rate: 2.3,
         capital: 345,
@@ -246,7 +246,7 @@ const ilgKartis=[
     {
         id: 2,
         nr: "NaudasNams",
-        text: "Termiņš: 5 gadi\nProcentu likme: 3.4%\nVeids: fiksēti\nKapitāls: 300 EUR",
+        text: "Termiņš: 5 gadi\nProcentu likme: 3,4%\nVeids: fiksēti\nKapitāls: 300 EUR",
         term: 5,
         rate: 3.4,
         capital: 300,
@@ -255,7 +255,7 @@ const ilgKartis=[
     {
         id: 3,
         nr: "DrošībaMax",
-        text: "Termiņš: 7 gadi\nProcentu likme: 1.9%\nVeids: fiksēti\nKapitāls: 360 EUR",
+        text: "Termiņš: 7 gadi\nProcentu likme: 1,9%\nVeids: fiksēti\nKapitāls: 360 EUR",
         term: 7,
         rate: 1.9,
         capital: 360,
@@ -264,7 +264,7 @@ const ilgKartis=[
     {
         id: 4,
         nr: "Bankas Sapnis",
-        text: "Termiņš: 8 gadi\nProcentu likme: 1.5%\nVeids: fiksēti\nKapitāls: 375 EUR",
+        text: "Termiņš: 8 gadi\nProcentu likme: 1,5%\nVeids: fiksēti\nKapitāls: 375 EUR",
         term: 8,
         rate: 1.5,
         capital: 375,
@@ -273,7 +273,7 @@ const ilgKartis=[
     {
         id: 5,
         nr: "Zelta Glabātava",
-        text: "Termiņš: 6 gadi\nProcentu likme: 2.2%\nVeids: fiksēti\nKapitāls: 336 EUR",
+        text: "Termiņš: 6 gadi\nProcentu likme: 2,2%\nVeids: fiksēti\nKapitāls: 336 EUR",
         term: 6,
         rate: 2.2,
         capital: 336,
@@ -282,7 +282,7 @@ const ilgKartis=[
     {
         id: 6,
         nr: "Ienesīgs Fonds",
-        text: "Termiņš: 2 gadi\nProcentu likme: 2.4%\nVeids: fiksēti\nKapitāls: 345 EUR",
+        text: "Termiņš: 2 gadi\nProcentu likme: 2,4%\nVeids: fiksēti\nKapitāls: 345 EUR",
         term: 2,
         rate: 2.4,
         capital: 345,
@@ -291,7 +291,7 @@ const ilgKartis=[
     {
         id: 7,
         nr: "Finanšu Osta",
-        text: "Termiņš: 5 gadi\nProcentu likme: 3.1%\nVeids: fiksēti\nKapitāls: 335 EUR",
+        text: "Termiņš: 5 gadi\nProcentu likme: 3,1%\nVeids: fiksēti\nKapitāls: 335 EUR",
         term: 5,
         rate: 3.1,
         capital: 335,
@@ -300,7 +300,7 @@ const ilgKartis=[
     {
         id: 8,
         nr: "Drošs Pieaugums",
-        text: "Termiņš: 6 gadi\nProcentu likme: 1.8%\nVeids: fiksēti\nKapitāls: 359 EUR",
+        text: "Termiņš: 6 gadi\nProcentu likme: 1,8%\nVeids: fiksēti\nKapitāls: 359 EUR",
         term: 6,
         rate: 1.8,
         capital: 359,
@@ -309,7 +309,7 @@ const ilgKartis=[
     {
         id: 9,
         nr: "Kapitāla Plūsma",
-        text: "Termiņš: 7 gadi\nProcentu likme: 1.4%\nVeids: fiksēti\nKapitāls: 358 EUR",
+        text: "Termiņš: 7 gadi\nProcentu likme: 1,4%\nVeids: fiksēti\nKapitāls: 358 EUR",
         term: 7,
         rate: 1.4,
         capital: 358,
@@ -318,7 +318,7 @@ const ilgKartis=[
     {
         id: 10,
         nr: "Naudas Kalns",
-        text: "Termiņš: 7 gadi\nProcentu likme: 2.2%\nVeids: fiksēti\nKapitāls: 355 EUR",
+        text: "Termiņš: 7 gadi\nProcentu likme: 2,2%\nVeids: fiksēti\nKapitāls: 355 EUR",
         term: 7,
         rate: 2.2,
         capital: 355,
@@ -327,7 +327,7 @@ const ilgKartis=[
     {
         id: 11,
         nr: "Naudas Straume",
-        text: "Termiņš: 5 gadi\nProcentu likme: 2.4%\nVeids: fiksēti\nKapitāls: 340 EUR",
+        text: "Termiņš: 5 gadi\nProcentu likme: 2,4%\nVeids: fiksēti\nKapitāls: 340 EUR",
         term: 5,
         rate: 2.4,
         capital: 340,
@@ -336,7 +336,7 @@ const ilgKartis=[
     {
         id: 12,
         nr: "Naudas Vērtības Augstkalne",
-        text: "Termiņš: 8 gadi\nProcentu likme: 1.3%\nVeids: fiksēti\nKapitāls: 350 EUR",
+        text: "Termiņš: 8 gadi\nProcentu likme: 1,3%\nVeids: fiksēti\nKapitāls: 350 EUR",
         term: 8,
         rate: 1.3,
         capital: 350,
@@ -345,7 +345,7 @@ const ilgKartis=[
     {
         id: 13,
         nr: "Gadsimta noguldījums",
-        text: "Termiņš: 2 gadi\nProcentu likme: 1.7%\nVeids: fiksēti\nKapitāls: 365 EUR",
+        text: "Termiņš: 2 gadi\nProcentu likme: 1,7%\nVeids: fiksēti\nKapitāls: 365 EUR",
         term: 2,
         rate: 1.7,
         capital: 365,
@@ -354,7 +354,7 @@ const ilgKartis=[
     {
         id: 14,
         nr: "Zelta Rezervju Fonds",
-        text: "Termiņš: 5 gadi\nProcentu likme: 2.9%\nVeids: fiksēti\nKapitāls: 320 EUR",
+        text: "Termiņš: 5 gadi\nProcentu likme: 2,9%\nVeids: fiksēti\nKapitāls: 320 EUR",
         term: 5,
         rate: 2.9,
         capital: 320,
@@ -363,7 +363,7 @@ const ilgKartis=[
     {
         id: 15,
         nr: "Drosmīgais Noguldījums",
-        text: "Termiņš: 6 gadi\nProcentu likme: 2.1%\nVeids: fiksēti\nKapitāls: 340 EUR",
+        text: "Termiņš: 6 gadi\nProcentu likme: 2,1%\nVeids: fiksēti\nKapitāls: 340 EUR",
         term: 6,
         rate: 2.1,
         capital: 340,
@@ -372,7 +372,7 @@ const ilgKartis=[
     {
         id: 16,
         nr: "Procentu Paradīze",
-        text: "Termiņš: 7 gadi\nProcentu likme: 2.0%\nVeids: fiksēti\nKapitāls: 339 EUR",
+        text: "Termiņš: 7 gadi\nProcentu likme: 2,0%\nVeids: fiksēti\nKapitāls: 339 EUR",
         term: 7,
         rate: 2.0,
         capital: 339,
@@ -381,7 +381,7 @@ const ilgKartis=[
     {
         id: 17,
         nr: "Peļņas Portfelis",
-        text: "Termiņš: 5 gadi\nProcentu likme: 3.4%\nVeids: fiksēti\nKapitāls: 315 EUR",
+        text: "Termiņš: 5 gadi\nProcentu likme: 3,4%\nVeids: fiksēti\nKapitāls: 315 EUR",
         term: 5,
         rate: 3.4,
         capital: 315,
@@ -390,7 +390,7 @@ const ilgKartis=[
     {
         id: 18,
         nr: "Stabila Glabātava",
-        text: "Termiņš: 8 gadi\nProcentu likme: 1.5%\nVeids: fiksēti\nKapitāls: 353 EUR",
+        text: "Termiņš: 8 gadi\nProcentu likme: 1,5%\nVeids: fiksēti\nKapitāls: 353 EUR",
         term: 8,
         rate: 1.5,
         capital: 353,
@@ -399,7 +399,7 @@ const ilgKartis=[
     {
         id: 19,
         nr: "Laimīgās Rezervācijas",
-        text: "Termiņš: 6 gadi\nProcentu likme: 2.3%\nVeids: fiksēti\nKapitāls: 329 EUR",
+        text: "Termiņš: 6 gadi\nProcentu likme: 2,3%\nVeids: fiksēti\nKapitāls: 329 EUR",
         term: 6,
         rate: 2.3,
         capital: 329,
@@ -408,7 +408,7 @@ const ilgKartis=[
     {
         id: 20,
         nr: "Noguldījumu Oāze",
-        text: "Termiņš: 5 gadi\nProcentu likme: 3.2%\nVeids: fiksēti\nKapitāls: 340 EUR",
+        text: "Termiņš: 5 gadi\nProcentu likme: 3,2%\nVeids: fiksēti\nKapitāls: 340 EUR",
         term: 4,
         rate: 3.2,
         capital: 340,
@@ -470,7 +470,7 @@ function jaunaKarts(){
             statuss.style.color="rgb(166, 146, 32)";
             statuss.innerText=par;
 
-            atb= "A-Iegūtā naudas summa no noguldījuma\n S-Sākotnējais kapitāls\n r-Procentu likme\n n-Termiņš (gados)";
+            atb= "A - Iegūtā naudas summa no noguldījuma\n S - Sākotnējais kapitāls\n r - Procentu likme\n n - Noguldījuma termiņš (gados)";
             atbilde.innerText = atb; 
             atbilde.style.display="flex";
 
@@ -495,7 +495,7 @@ function jaunaKarts(){
             statuss.style.color="rgb(166, 146, 32)";
             statuss.innerText=par;
 
-            atb= "Izmantojot datus un salikto procentu formulu, nosaki un izvēlies ienesīgāko investīciju! Aprēķinot summu termiņš jānorāda gados. Par katru pareizu atbildi – 1 punkts. Spēles beigās uzzināsi iegūtos punktus, naudas summu un maksimālo iegūstamo naudas summu par noguldījumiem. Veiksmi!";
+            atb= "Izmantojot datus un salikto procentu formulu, nosaki un izvēlies ienesīgāko investīciju! Par katru pareizu atbildi – 1 punkts. Spēles beigās uzzināsi iegūtos punktus, naudas summu un maksimālo iegūstamo naudas summu par noguldījumiem. Veiksmi!";
             atbilde.innerText = atb; 
             atbilde.style.display="flex";
 
@@ -518,7 +518,7 @@ function jaunaKarts(){
             console.log("sākas jautājumi par ilgtermiņa noguldījumiem");
             console.log("spēlētājs ir ",klase," skolnieks/ce");
         }
-        if (questionNr>0 && questionNr < 6) {
+        if (questionNr>=1 && questionNr < 6) {
             uzdevums="Izvēlies ienesīgāko ilgtermiņa noguldījumu, balstoties uz doto informāciju!";
             uzd.innerText=uzdevums;
             // kārts 1
@@ -625,7 +625,7 @@ function pienemt(){
             atb= "Pamatojums: "+cardValue+" > "+cardValue1+" \n Iegūtais punktu skaits: "+punkti+"\nTurpmākās investīcijas būs īstermiņa noguldījumi!\n Ņem vērā, ka noguldījuma termiņa vērtība jāizsaka gados!";
         }
         else{
-        atb= "Pamatojums: "+cardValue+" < "+cardValue1+" \n Iegūtais punktu skaits: "+punkti;
+        atb= "Pamatojums: "+cardValue+" > "+cardValue1+" \n Iegūtais punktu skaits: "+punkti;
         }
         atbilde.innerText = atb; 
         atbilde.style.display="flex";
@@ -652,7 +652,10 @@ function pienemt(){
         statuss.style.color="rgb(208, 22, 22)";
         statuss.innerText=par;
         if(questionNr==5){
-            atb= "Pamatojums: "+cardValue+" < "+cardValue1+" \n Iegūtais punktu skaits: "+punkti+"\n Turpmākās investīcijas būs īstermiņa noguldījumi!\n Ņem vērā, ka noguldījuma termiņa vērtība jāizsaka gados!";
+            atb= "Pamatojums: "+cardValue+" < "+cardValue1+" \n Iegūtais punktu skaits: "+punkti+"\nTurpmākās investīcijas būs īstermiņa noguldījumi!\n Ņem vērā, ka noguldījuma termiņa vērtība jāizsaka gados!";
+        }
+        else if(questionNr>5){
+            atb= "Pamatojums: "+cardValue+" < "+cardValue1+" \n Iegūtais punktu skaits: "+punkti+"\n Pārliecinies, ka noguldījuma termiņa vērtība izteikta gados (Term/12)!";
         }
         else{
         atb= "Pamatojums: "+cardValue+" < "+cardValue1+" \n Iegūtais punktu skaits: "+punkti;
@@ -699,10 +702,10 @@ function pienemt1(){
         statuss.style.color="green";
         statuss.innerText=par;
         if(questionNr==5){
-            atb= "Pamatojums: "+cardValue+" < "+cardValue1+" \n Iegūtais punktu skaits: "+punkti+"\nTurpmākās investīcijas būs īstermiņa noguldījumi!\n Ņem vērā, ka noguldījuma termiņa vērtība jāizsaka gados!";
+            atb= "Pamatojums: "+cardValue1+" > "+cardValue+" \n Iegūtais punktu skaits: "+punkti+"\nTurpmākās investīcijas būs īstermiņa noguldījumi!\n Ņem vērā, ka noguldījuma termiņa vērtība jāizsaka gados!";
         }
         else{
-        atb= "Pamatojums: "+cardValue+" < "+cardValue1+" \n Iegūtais punktu skaits: "+punkti;
+        atb= "Pamatojums: "+cardValue1+" > "+cardValue+" \n Iegūtais punktu skaits: "+punkti;
         }
         atbilde.innerText = atb; 
         atbilde.style.display="flex";
@@ -721,7 +724,7 @@ function pienemt1(){
         maxVal=cardValue;
         tableRez();
 
-        maxSumma=maxSumma+cardValue1;
+        maxSumma=maxSumma+cardValue;
         console.log("Max summa:"+maxSumma);
         //popup
         popup.style.display="block";
@@ -730,10 +733,13 @@ function pienemt1(){
         statuss.style.color="rgb(208, 22, 22)";
         statuss.innerText=par;
         if(questionNr==5){
-            atb= "Pamatojums: "+cardValue+" < "+cardValue1+" \n Iegūtais punktu skaits: "+punkti+"\nTurpmākās investīcijas būs īstermiņa noguldījumi!\n Ņem vērā, ka noguldījuma termiņa vērtība jāizsaka gados!";
+            atb= "Pamatojums: "+cardValue1+" < "+cardValue+" \n Iegūtais punktu skaits: "+punkti;
+        }
+        else if(questionNr>5){
+            atb= "Pamatojums: "+cardValue1+" < "+cardValue+" \n Iegūtais punktu skaits: "+punkti+"\n Pārliecinies, ka noguldījuma termiņa vērtība izteikta gados (Term/12)!";
         }
         else{
-        atb= "Pamatojums: "+cardValue+" < "+cardValue1+" \n Iegūtais punktu skaits: "+punkti;
+        atb= "Pamatojums: "+cardValue1+" < "+cardValue+" \n Iegūtais punktu skaits: "+punkti;
         }
         atbilde.innerText = atb; 
         atbilde.style.display="flex";
